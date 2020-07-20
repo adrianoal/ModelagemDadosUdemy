@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D896A46D-C226-02EE-2643-44A62FDA0657" name="EMPREGADO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 18:04:33 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>EMPG</preferredAbbreviation>
+<shortName>EMPG</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="empregado_id" id="25212F45-1F0D-0464-23CA-618A788E5AEC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:18:41 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="C8815E0A-59DD-7740-FF8C-2BC221FA9ED0">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:19:29 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sobre_nome" id="118CB85F-9D79-3FBA-98A5-14F28F2371B6">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:20:23 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cargo" id="65620185-30F3-C04E-3048-D203AD37DF04">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:20:43 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_nascimento" id="8E11A8C1-82E1-B42F-92FD-2819837F9D4E">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:22:26 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salario" id="BF57CE98-90F3-D825-A687-B164F9666A57">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:23:38 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="percentual_comissao" id="B0AAA5E7-CC77-5940-8C2E-A0E9B55ED0C5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:25:14 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gerente_id" id="1800D765-18DF-9F03-761B-BFBFA620F19A">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-20 20:27:14 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
