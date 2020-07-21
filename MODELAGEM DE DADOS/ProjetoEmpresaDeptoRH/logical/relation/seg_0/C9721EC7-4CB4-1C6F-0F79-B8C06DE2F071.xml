@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EMPREGADO_GERENTE" directorySegmentName="seg_0" id="C9721EC7-4CB4-1C6F-0F79-B8C06DE2F071">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 21:11:10 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<targetPk>35284463-3FC9-38BD-5246-2E0426EA4DD6</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D896A46D-C226-02EE-2643-44A62FDA0657</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D896A46D-C226-02EE-2643-44A62FDA0657</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

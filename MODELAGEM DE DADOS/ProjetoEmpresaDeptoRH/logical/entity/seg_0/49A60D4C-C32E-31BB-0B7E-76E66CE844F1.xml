@@ -56,6 +56,21 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="empresa_id" id="0FCBCF4C-E785-6E48-245C-A06C143E6561">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 21:08:42 UTC</createdTime>
+<generatorID>F4C86E91-5DE3-3F1B-65DB-04E8FAA54408</generatorID>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<referedAttribute>AEB13527-545F-2C58-562C-E58CA1DC4E64</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="D4C07ED0-D4F5-99A7-276E-13A17F1ED6F5" name="DEPARTAMENTO PK">

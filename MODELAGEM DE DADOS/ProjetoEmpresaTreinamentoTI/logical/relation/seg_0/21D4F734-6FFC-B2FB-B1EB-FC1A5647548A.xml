@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CURSO_AGENDA_CURSO" directorySegmentName="seg_0" id="21D4F734-6FFC-B2FB-B1EB-FC1A5647548A">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 19:27:49 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8B49503A-AFDA-C17D-0102-FA3E43283D73</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9E99D397-60E4-509B-B80E-39480B569F7C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

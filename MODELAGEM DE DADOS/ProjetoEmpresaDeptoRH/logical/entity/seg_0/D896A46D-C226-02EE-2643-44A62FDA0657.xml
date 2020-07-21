@@ -125,6 +125,50 @@
 <dataTypePrecision>18</dataTypePrecision>
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="fotografia" id="750E1152-C6BA-0159-1723-A27B988F4A7A">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 21:06:50 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-7DD553FD-11E8-61FA-399D-2E531FB621D0@LOGDT10034</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departamento_id" id="CA5DE7CA-C26C-E447-3C6B-85BA1E938BA7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 21:09:24 UTC</createdTime>
+<generatorID>DA1BD91C-4918-7F76-B2BD-8BA56FD03751</generatorID>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<referedAttribute>85C508A9-5A36-2C99-560D-B01393641295</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empregado_id1" id="4DC86B18-5D58-C3FB-E897-217DC67D65BB">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 21:11:10 UTC</createdTime>
+<generatorID>C9721EC7-4CB4-1C6F-0F79-B8C06DE2F071</generatorID>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>25212F45-1F0D-0464-23CA-618A788E5AEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="35284463-3FC9-38BD-5246-2E0426EA4DD6" name="EMPREGADO PK">

@@ -463,14 +463,177 @@ informações importantes com relação as necessidades do negócio dentro do es
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
+10.Identificador Único
+
+ * Cada Instância deve ser unicamente identificável de outras da mesma Entidade.
+ 
+ * Um Atributo ou conjunto de Atributos que exclusivamente identificam uma Entidade é chamado
+   de 'identificador Único'(UID).
+   
+ Exemplos:
+ --------
+ 
+ * Cada Empregado tem um número de identificador único(empregado_id), sendo este um candidato a
+   identificador único da entidade EMPREGADO.
+
+  * Cada Departamento tem um número de identificador único(departamento_id), sendo este um 
+    candidato a identificador único da entidade DEPARTAMENTO.
+
+
+ PROCURANDO POR IDENTIFICADORES ÚNICOS:
+ -------------------------------------- 
+ 
+ * Se você não consegue identificar uma Entidade exclusivamente, pode ser um indicador de que 
+   este elemento não é uma Entidade.
+   
+ * No entanto, não desqualifique uma Entidade muito cedo, mais tarde no processo de análise,
+   quando você obtiver mais informações sobre o negócio você pode acabar encontrando um bom
+   identificador artificial, (numérico sequencial).
+
+    
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------  
+11.Identificador de Entidades 
+
+ PASSOS PARA IDENTIFICAR ENTIDADES A PARTIR DE ENTREVISTAS:
+ ----------------------------------------------------------
+
+ * Examine os substantivos.
+   Eles são de real significado para o negócio da aplicação?
+
+ * Dê um nome para cada Entidade identificada.
+ 
+ * Verifique se realmente existem informações de interesse sobre a Entidade em relação as 
+   necessidades do negócio dentro do Escopo do projeto que devam ser mantidas e controladas.
+
+ * Cada instância da Entidade pode ser unicamente identificável?
+   Qual atributo ou conjunto de atributos poderiam servir como seu UID?
+
+ Obs: Não desqualifique uma Entidade muito cedo, pois poderão ser descobertos Atributos 
+ adicionais de interesse do negócio e dentro do escopo do projeto mais tarde.
+
+  Vamos para um exemplo Prático:
+  ------------------------------
+ 
+ Identifique e modele as entidades a partir das necessidades de informação a seguir:
+
+ Eu sou o gerente de uma empresa de treinamento que prove cursos de TI.
+ Nós possuímos muitos cursos, sendo que cada curso possui um código, um nome, um preço, 
+ Administração do banco de dados Oracle 1 e  Administração do banco de dados Oracle 2 são
+ dois de nossos cursos mais populares.
+ 
+ Os cursos variam em duração de 20 a 30 horas.
+ Um instrutor pode ser capaz de ministrar vários cursos.
+ Nikola Tesla e Albert Einstein são dois de nossos melhores instrutores.
+ Nós posuímos em nossa cadastro, o nome de cada instrutor e o número de seu telefone.
+ Cada curso é agendado para uma determinada data de início, sendo ministrado por um único 
+ instrutor.
+ Nós agendamos um curso e então alocamos um instrutor.
  
   
  
+ Entidades:
+			EMPRESA      --> PJ com o objetivo de ministrar cursos de TI.
+			CURSO        --> Treinamento oferecido pela empresa.
+			INSTRUTOR    --> Profissional que ministra os cursos.
+			ALUNO	  	 --> Pessoa que participa de um curso.
+			AGENDA_CURSO --> Data para qual um determinado Curso está agendado.
+			 
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------  
+12.Relacionamentos 
+
+ * Relacionamento é uma associação bi-direcional entre duas Entidades ou entre uma Entidade a
+   a ela mesma.
+
+ Obs: Relacionamento de uma Entidade com ela mesma. --> É um Relacionamento recursivo.
+
+ O Banco de dados Oracle, é o melhor banco de dados relacional do Mundo, e 2º lugar é o da IBM
+DB2. 
+ 	
+ Relacionamentos - Convenções de Diagramação:
+ --------------------------------------------
+ 
+ * Relacionamento com linha cheia são obrigatórios
+ * Cardinalidade mínima 1 (Obrigatória)
+ * Para leitura utilizamos a palavra deve
+ 
+ * Relacionamento com linha pontilhadas são opcionais      -----
+ * Cardinalidade mínima 0 (Opcional)
+ * Para leitura utilizamos a palavra 'pode'
+ 
+ * Relacionamentos que terminam com pé de galinha representam cardinalidade máxima 'um ou mais'.(N)
+ 
+ * Relacionamentos que terminam com somente um traço representam cardinalidade máxima 'um e somente um'.
+ 
+  Convenção para leitura de um Relacionamento:
+  --------------------------------------------
+  
+  AGENDA_CURSO <-- Entidade 
+  CURSO 	   <-- Entidades
+  
+  Cada AGENDA CURSO deve ser referente a um e somente um CURSO
+  Cada CURSO pode ser referenciado por uma ou mais AGENDA CURSOS
+  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------  
+13.Tipos de Relacionamentos 
+
+ * Relacionamento Muitos para Um (M:1)
+ * Relacionamento Muitos para Muitos (M:M)
+ * Relacionamento Um para Um (1:1) -- Raro nos dias de hoje
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------  
+14.Identificando Relacionamentos 
+
+ PASSOS PARA IDENTIFICAR RELACIONAMENTOS:
+ ----------------------------------------
+ 
+ 1. Selecione as Entidades aos pares e verifique se existe uma relação entre elas.
+ 2. Caso exista uma relação, dê um nome para cada direção do relacionamento que o descreva
+    corretamente. Evite o uso de jargões, tais como; pertence e possui 
+ 3. Determine a opcionalidade ou obrigatoriedade para cada direção do relacionamento
+ 4. Determine a cardinalidade para cada direção do relacionamento
+ 5. Leia o relacionamento em voz alta para você mesmo para validá-lo.
+ 6. Faça a validação do relacionamento com o usuário; confirme o relacionamento questionando o
+    usuário de diversas formas, questione se na prática nunca ocorrem exceções. 
+	O usuário raramente se lembra de exceções.
+ 7. Com relação a relacionamentos obrigatórios seja bastante criterioso e preocupe-se com todo
+    o ciclo de vida da Entidade e não apenas com o momento atual
+
+ Por exemplo: Faz sentido dizer que cada Departamento deve possuir no mínimo um Funcionário, 
+ no entanto, no momento da criação de um novo Departamento ele pode conter nenhum Funcionário.
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------  
+15.LayOut do Diagrama ER
+
+ * Faça um diagrama ER claro e limpo 
+ * Alinha os retângulos das Entidades pela linha superior 
+ * Desenhe os relacionamentos horizontalmente, procure evitar que os relacionamentos se cruzem,
+   se necessário utilize ângulos de 30 a 60 graus.
+ * Utilize bem os espaços do seu diagrama, distribuindo bem os objetos. 
+   Evite congestionar uma porção do diagrama
+ * Em certas situações é interessante esticar o tamanho de uma Entidade horizontalmente ou 
+   verticalmente para evitar cruzamento de relacionamentos.
+ * Se possível distribua as Entidades seguindo a regra "Os corvos voam para o leste ou para o Sul"   
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+
+   
+ 
+ 
+  	
  
  
  
  
- 
+
+
+
  
  
  
