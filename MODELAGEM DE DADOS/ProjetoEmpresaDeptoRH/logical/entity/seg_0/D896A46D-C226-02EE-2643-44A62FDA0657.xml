@@ -126,4 +126,18 @@
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="35284463-3FC9-38BD-5246-2E0426EA4DD6" name="EMPREGADO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 13:28:05 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>25212F45-1F0D-0464-23CA-618A788E5AEC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

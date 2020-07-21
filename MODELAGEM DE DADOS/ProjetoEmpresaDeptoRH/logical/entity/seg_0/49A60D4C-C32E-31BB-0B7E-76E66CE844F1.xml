@@ -57,4 +57,18 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D4C07ED0-D4F5-99A7-276E-13A17F1ED6F5" name="DEPARTAMENTO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 13:28:30 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaDeptoRH</ownerDesignName>
+<engineerTo>
+<item key="2A1520F3-DEB6-7AC6-3AD6-92357017827F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>85C508A9-5A36-2C99-560D-B01393641295</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
