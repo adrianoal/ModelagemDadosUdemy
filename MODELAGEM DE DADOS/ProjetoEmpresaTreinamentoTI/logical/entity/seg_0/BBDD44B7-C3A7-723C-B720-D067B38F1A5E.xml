@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BBDD44B7-C3A7-723C-B720-D067B38F1A5E" name="ALUNO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:37:16 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>ALUN</preferredAbbreviation>
+<shortName>ALUN</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="aluno_id" id="CA098786-13DA-33C3-B205-06E6BDC0718D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:46:47 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="9D54FD73-E03A-4FC9-CDEB-7034B34122A3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:47:21 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

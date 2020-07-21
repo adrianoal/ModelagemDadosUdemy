@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C818F6E3-DCFC-7A25-6A1D-D7B596DE1894" name="INSTRUTOR">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:36:42 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>INST</preferredAbbreviation>
+<shortName>INST</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="instrutor_id" id="D196419F-1A90-E1F6-03CD-C0F06388425C">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:44:24 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="461C3C5A-AEFD-E333-2949-1240C20CDC8B">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:44:48 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone" id="34CAA94A-B0B5-AAF7-4747-EA58E7B11DB3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-21 14:45:38 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
