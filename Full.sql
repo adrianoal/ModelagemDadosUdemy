@@ -747,7 +747,31 @@ DB2.
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+17.Refinando Identificadores Únicos 
 
+ * Um identificador Único é uma combinação de atributos ou relacionamentos que servem para 
+   unicamente identificar uma instância de uma Entidade.
+ 
+ * Cada instância de uma Entidade deve ser unicamente identificável.
+
+ Exemplo de identificadores simples:
+ -----------------------------------
+
+ Num departamento de RH, cada instância da Entidade Departamento é unicamente identificada pelo
+ departamento_id.
+
+ Exemplo de identificadores compostos:
+ -------------------------------------
+
+ Num pequeno Teatro, cada instância da Entidade Ingresso é únicamente identificada pela Data da 
+ Performance em um conjunto com o Número do assento.
+ 
+ data_performance
+ assento 
+ 
+ 
+
+  
 
 
 
