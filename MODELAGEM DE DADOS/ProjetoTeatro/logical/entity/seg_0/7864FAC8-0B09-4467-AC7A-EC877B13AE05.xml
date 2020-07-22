@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7864FAC8-0B09-4467-AC7A-EC877B13AE05" name="INGRESSO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:34:53 UTC</createdTime>
+<ownerDesignName>ProjetoTeatro</ownerDesignName>
+<engineerTo>
+<item key="09821767-443F-85B8-F8CB-10FD395A5090" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>INGR</preferredAbbreviation>
+<shortName>INGR</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="dt_performance" id="1CA2C863-3E11-8A2D-CE6E-F5BBF8FDB422">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:35:14 UTC</createdTime>
+<ownerDesignName>ProjetoTeatro</ownerDesignName>
+<engineerTo>
+<item key="09821767-443F-85B8-F8CB-10FD395A5090" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assento" id="427F5398-3809-6EF0-3D04-DE0E75A683E8">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:35:39 UTC</createdTime>
+<ownerDesignName>ProjetoTeatro</ownerDesignName>
+<engineerTo>
+<item key="09821767-443F-85B8-F8CB-10FD395A5090" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2FCD611F-0440-5B42-461B-B9D650C098AE" name="INGRESSO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:35:32 UTC</createdTime>
+<ownerDesignName>ProjetoTeatro</ownerDesignName>
+<engineerTo>
+<item key="09821767-443F-85B8-F8CB-10FD395A5090" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1CA2C863-3E11-8A2D-CE6E-F5BBF8FDB422</attributeRef>
+<attributeRef>427F5398-3809-6EF0-3D04-DE0E75A683E8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

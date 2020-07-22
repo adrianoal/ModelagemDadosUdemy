@@ -766,8 +766,53 @@ DB2.
  Num pequeno Teatro, cada instância da Entidade Ingresso é únicamente identificada pela Data da 
  Performance em um conjunto com o Número do assento.
  
- data_performance
- assento 
+	INGRESSO
+ #*data_performance
+ #*assento 
+ 
+ 
+ Identificadores Únicos com Relacionamentos:
+ -------------------------------------------
+ 
+ Num pequeno banco, cada instância da Conta Corrente é unicamente identificada pelo 
+ Numero da Conta, em conjunto com o relacionamento de Conta Conrrente com Âgencia e com o
+ relacionamento da Âgencia com banco.
+ 
+ O Diagrama abaixo representa os sistemas legados(Antigos), hoje não seu usa essa modelagem
+ 
+	CONTA_CORRENTE			AGENCIA				BANCO
+ #*numero					  #*codigo			  #*codigo
+ 
+ 
+ Mais de um Identificador Único:
+ -------------------------------
+ 
+ * Uma Entidade pode possuir mais de uma identificador Único
+ * Selecione como UID 1(Principal Identificador) aquele que melhor identifica casa Instância
+   da ENTIDADE
+   
+ Os outros Identificadores são UIDs secundários (UID2, UID3, etc)   
+ 
+ 
+ Mais de um identificador Único:
+ -------------------------------
+ 
+ Exemplo:
+ 
+ Numa pequena Empresa, cada Instância da Entidade Cliente pode ser unicamente identificada pelo 
+ cliente_id (UID), ou pelo CPF (UID 2)
+ 
+	CLIENTE
+  #*cliente_id
+  U*cpf
+   *primeiro_nome
+   *sobre_nome
+   *telefone
+   
+ Esse exemplo é uma modelagem moderna, uma boa prática.
+
+ 
+ 
  
  
 
