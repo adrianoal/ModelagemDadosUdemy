@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8B49503A-AFDA-C17D-0102-FA3E43283D73" name="CURSO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="26044273-2234-8430-9A9E-4839C0216526" name="TELEFONE">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:35:56 UTC</createdTime>
+<createdTime>2020-07-22 16:59:21 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
@@ -14,13 +14,12 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>CRSO</preferredAbbreviation>
-<shortName>CRSO</shortName>
-<synonym>TREINAMENTO</synonym>
+<preferredAbbreviation>FONE</preferredAbbreviation>
+<shortName>FONE</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="curso_id" id="624BCC2B-9128-4316-D3A6-E6243AC8C538">
+<Attribute name="telefone_id" id="C9983BD2-D64F-CEC9-0302-69076D0620C1">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:39:51 UTC</createdTime>
+<createdTime>2020-07-22 16:59:40 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
@@ -31,22 +30,9 @@
 <dataTypePrecision>18</dataTypePrecision>
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="codigo" id="23A3EA40-DE4A-47CC-2409-CDEB4686EFB1">
+<Attribute name="numero" id="BB92512E-02AC-927E-CFD2-8F5CB1C05C82">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:40:12 UTC</createdTime>
-<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
-<engineerTo>
-<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nome" id="C9858FBD-75AF-6CFF-CB0D-1278835E21E7">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:41:32 UTC</createdTime>
+<createdTime>2020-07-22 17:00:03 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
@@ -57,58 +43,65 @@
 <dataTypeSize>40</dataTypeSize>
 <ownDataTypeParameters>40,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="peco" id="A6577572-E7D6-7C39-0840-83C20561E4DF">
+<Attribute name="instrutor_id" id="62ABE463-21BC-4FD1-C3E4-7A65D420F787">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:41:59 UTC</createdTime>
+<createdTime>2020-07-22 17:04:05 UTC</createdTime>
+<generatorID>23DE4399-4858-C03A-0B48-173301FC1ECF</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>D196419F-1A90-E1F6-03CD-C0F06388425C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="duracao" id="A3EAD9E9-FDF1-0A45-8D2D-11807134D309">
+<Attribute name="aluno_id" id="6BD3C0A1-239E-2728-6470-D179837F3F15">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:42:56 UTC</createdTime>
+<createdTime>2020-07-22 17:05:56 UTC</createdTime>
+<generatorID>2782786E-61B3-803D-E6F9-78D703865BE6</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CA098786-13DA-33C3-B205-06E6BDC0718D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>6</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_fone_id" id="B9FA4589-812D-D3D2-F22B-5AF184D86F39">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 19:21:52 UTC</createdTime>
+<generatorID>AAF582E6-6707-7B06-1784-B280A57789E9</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<referedAttribute>84F70CC2-D110-DED6-F364-E0758A3EE0F1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="059D6986-6851-03BA-C7F7-DD7507FE3A51" name="CURSO PK">
+<identifier id="C5E45859-93A1-F4B9-255D-5FF5652B9418" name="TELEFONE PK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-22 16:52:26 UTC</createdTime>
+<createdTime>2020-07-22 16:59:57 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>624BCC2B-9128-4316-D3A6-E6243AC8C538</attributeRef>
-</usedAttributes>
-</identifier>
-<identifier id="05F5836A-BFEC-AA36-C1D2-93A428EA7BF6" name="Key_2">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-07-22 16:53:42 UTC</createdTime>
-<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
-<engineerTo>
-<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
-</engineerTo>
-<newElementsIDs>23A3EA40-DE4A-47CC-2409-CDEB4686EFB1</newElementsIDs>
-<usedAttributes>
-<attributeRef>23A3EA40-DE4A-47CC-2409-CDEB4686EFB1</attributeRef>
+<attributeRef>C9983BD2-D64F-CEC9-0302-69076D0620C1</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

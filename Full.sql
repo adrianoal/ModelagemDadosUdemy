@@ -622,7 +622,167 @@ DB2.
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+16.Refinando Atributos
 
+ * Atributos são informações sobre uma Entidade, que precisam ser conhecidos e mantidos.
+ 
+ * Atributos descrevem um Entidade de uma das seguintes formas:
+   Qualificando, identificando, classificando, quantificando, descrevendo ou expressando o 
+   estado da Entidade.
+   
+ Alguns exemplos de atributos para a Entidade EMPREGADO:
+ -------------------------------------------------------
+ 
+ * Nemero de identificação: Identifica o empregado
+ * Nome: Descreve o empregado
+ * Categoria Salarial: Classifica o empregado
+ * Data de Nascimento: Quantifica o empregado, visto que podemos obter a idade.
+ * Salario: Classifica o empregado
+ * Situação: Descreve o estado do empregado
+ 
+ * Nomes de atributos devem ser claros para o usuário, e não codificados pelo desenvolvedor.
+ 
+ * O nome da Entidade sempre é um qualificador do Atributo, logo o nome da entidade ou seu 
+   prefixo.
+   
+ * Nomes de atributos devem ser específicos, por exemplo:
+	Quantidade Pedida,
+	Quantidade Expedida,
+	Data de Inicio,
+	Dta de Fim.
+	
+ Nestes casos o atributo deve conter um 'qualificador' no seu nome para diferenciar os Atributos.
+ 
+ * Algumas palavras aparecem com frequência em nomes de Atributos que precisam ser qualificados,
+   tais como quantidade, data, valor, exemplo: Qtde pedida, Qtde expedida, Dt inicio, Dt fim, etc.
+   
+ Atributos no Diagrama ER:
+ -------------------------
+
+ * Atributos são representados dentro do retângulo com bordas que a Entidade descrevem
+ 
+ * Nome do Atributo no singular e único para a Entidade 
+ 
+ * nome do Atributo em letras minúsculas
+ 
+ 
+ Decompondo Atributos:
+ ---------------------
+ 
+ * Decomponha um atributo até encontrar todos os seus componentes detalhados para as necessidades
+   do negócio dentro do Escopo do projeto.
+   
+ * Exemplo: Endereço pode ser decomposto em: logradouro, 
+											 tipo de logradouro, 
+											 número,
+											 complemento,
+											 bairro,
+											 cidade,
+											 estado,
+											 cep,
+											 país
+ Obs: O nível de decomposição de um atributo vai depender do Escopo do projeto e das necessidades 
+      de negócio.
+
+ * Cada instância de uma Entidade possui valores específicos para os Atributos da Entidade.
+
+  
+ Exemplo:
+ --------
+ 
+ * Numero de identificação: 1001
+ * Nome: julio Cesar
+ * Data: 27/10/1990
+ * Salario: R$ 15.000,00
+ 
+ * Numero de identificação: 1002
+ * Nome: Maria Madalena
+ * Data: 17/11/1995
+ * Salario: R$ 10.000,00
+   
+   
+ Atributos que Unicamente identificam uma Entidade:
+ --------------------------------------------------
+ 
+ * Uma Entidade pode ser unicamente identificada por um Atributo ou por um conjunto de ATRIBUTOS
+ 
+ * O(s) Atributo(s) que unicamente identificam uma Entidade são chamados de identificadores 
+ Únicos (UID)
+ 
+ * Uma Entidade pode possuir mais de um identificador Únicos
+ 
+ Atributos derivados ou calculados:
+ ----------------------------------
+ 
+ * Verifique si i atributo identificado pode ser derivado ou calculado a partir de valores 
+   existentes de outros Atributos da mesma Entidade ou de outras Entidades, se for o caso 'não 
+   inclua o Atributo' no diagrama ER.
+   
+ Em algumas situações pode ser fazer isso, ou seja, quebrar a regra por uma questão de 
+ performance, porém, isso seria uma exceção.
+ 
+ 
+ Diferenças entre Atributos e Entidades:
+ ---------------------------------------
+ 
+ * Todas as Entidades são substantivos, mas nem todos os substantivos são Entidades, porque,
+   podem ser atributos de Entidades.
+
+ ENTIDADES:
+ ----------
+ 
+ * Elemento sobre a qual informações devam ser mantidas
+ * Possui um ou mais ATRIBUTOS
+ * Se uma Entidade não possui Atributos, talves ela seja somente um Atributo de outra Entidade
+ * Pode possuir múltiplas instâncias
+ 
+ 
+ ATRIBUTO:
+ ---------
+ 
+ * Descreve a Entidade
+ * Não possui ATRIBUTOS
+ * Se um Atributo possui atributos, então ele é uma Entidade.
+ * Deve possuir um único valor para cada instância da Entidade. 
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+    
+   
+    
+   
+   
+   
+   
+   
+   
+   
+ 
    
  
  

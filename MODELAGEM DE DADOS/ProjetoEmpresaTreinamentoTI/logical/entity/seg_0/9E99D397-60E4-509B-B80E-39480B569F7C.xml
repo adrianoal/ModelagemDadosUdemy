@@ -17,20 +17,7 @@
 <preferredAbbreviation>AGEN</preferredAbbreviation>
 <shortName>AGEN</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="agenda_id" id="67F86DD4-C2F5-40D7-AE05-D180E418DA08">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:47:44 UTC</createdTime>
-<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
-<engineerTo>
-<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,18,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="agenda_curso" id="52370F18-7E87-8FDF-46ED-1C96F9F75188">
+<Attribute name="agenda_curso_id" id="52370F18-7E87-8FDF-46ED-1C96F9F75188">
 <createdBy>aalima5</createdBy>
 <createdTime>2020-07-21 14:48:06 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
@@ -55,5 +42,64 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="empresa_id" id="944CBFF2-B288-EB52-858D-666140EB7741">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 16:52:14 UTC</createdTime>
+<generatorID>88679141-63BA-C2D4-76F5-8D7BF5A6795C</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<referedAttribute>E8D9B0AF-AED3-948F-DD85-512BDE7C3A9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="instrutor_id" id="662D9F13-BD7D-EF99-9C8F-A09042200FC4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 16:52:22 UTC</createdTime>
+<generatorID>75A927EF-48E9-C99F-24F3-97CEEF133E53</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<referedAttribute>D196419F-1A90-E1F6-03CD-C0F06388425C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="curso_id" id="BF02345F-3D09-3ACF-8FCC-889174101542">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 16:52:27 UTC</createdTime>
+<generatorID>21D4F734-6FFC-B2FB-B1EB-FC1A5647548A</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<referedAttribute>624BCC2B-9128-4316-D3A6-E6243AC8C538</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="997B7B05-5E9B-CA7D-119D-B879C679EAA8" name="AGENDA_CURSO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 16:51:34 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>52370F18-7E87-8FDF-46ED-1C96F9F75188</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

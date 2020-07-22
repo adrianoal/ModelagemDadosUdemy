@@ -44,4 +44,18 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6E13C06B-71C9-DBF1-63CB-ACF63055EF33" name="ALUNO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 16:52:32 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA098786-13DA-33C3-B205-06E6BDC0718D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

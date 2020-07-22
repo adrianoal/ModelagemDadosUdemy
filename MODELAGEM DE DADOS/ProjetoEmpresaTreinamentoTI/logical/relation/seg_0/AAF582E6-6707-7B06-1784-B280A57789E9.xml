@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EMPRESA_AGENDA_CURSO" directorySegmentName="seg_0" id="88679141-63BA-C2D4-76F5-8D7BF5A6795C">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TIPO_TELEFONE_TELEFONE" directorySegmentName="seg_0" id="AAF582E6-6707-7B06-1784-B280A57789E9">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 19:44:39 UTC</createdTime>
+<createdTime>2020-07-22 19:21:52 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
 </engineerTo>
-<sourcePk>212592E4-7C19-633C-7DEB-A698804F53BB</sourcePk>
+<sourcePk>B818A19E-19FC-0EAB-4A8A-FBF1554AE736</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>83C88399-322B-FA04-E016-21A4C0B5EAEC</sourceEntity>
+<sourceEntity>19BF0C63-39B7-011B-9274-3C540405764C</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>9E99D397-60E4-509B-B80E-39480B569F7C</targetEntity>
+<targetEntity>26044273-2234-8430-9A9E-4839C0216526</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>
