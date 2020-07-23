@@ -812,6 +812,146 @@ DB2.
  Esse exemplo é uma modelagem moderna, uma boa prática.
 
  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
+
+18.Normalização do Modelo de Dados
+
+ Uma das sessões mais importante do curso:
+ -----------------------------------------
+ 
+ * Normalização 'é um conceito de banco de dados relacional', mas 'seus princípios se aplicam a 
+   modelagem de dados conceitual'.
+   Obs: Na metodologia da Oracle, já se faz a normalização dos dados na faze de análise
+																			(Modelo Conceitual). 
+   
+ * O objetivo da Normalização do Modelo de Dados é 'eliminar a redudância' no modelo de dados.
+	Obs: Não se pode ter informações em lugares diferentes, isso causaria erro de integridade de
+		 dados. Por exemplo, cadastro, não se pode ter duas tabelas de cadastro, isso deve estar
+		 em um único lugar.
+ 
+ * Um Banco de dados normalizado é de fundamental importância para o sucesso da aplicação,
+   visto que redundâncias podem comprometer seriamente a integridade das informações
+
+ NORMALIZAÇÃO:
+ -------------
+
+ * Valide cada Atributo de cada Entidade utilizando as regras de normalização.
+
+ REGRAS DE NORMALIZAÇÃO:
+ -----------------------
+
+
+ * Primeira Forma Normal(1FN) 
+ ----------------------------
+ 
+	Como se faz? 
+	1º Eu aplico a (1FN) sobre todas as entidades do meu modelo de dados. 
+	Se tiver alguma entidade com problema, eu resolvo o problema. 
+	Estando tudo ok, vou para a segunda forma normal.
+ 
+ * Segunda Forma normal(2FN)
+ ---------------------------
+ 
+	Verifico se todas as entidades estão na (2FN), se tiver alguma com problema eu resolvo, 
+	e desenho meu diagrama na (2FN).
+    Estando tudo ok, vou para a terceira forma normal.
+	
+ * Terceira Forma Normal(3FN)
+ ----------------------------
+ 
+ Verifico se todas as Entidades estão na (3FN),  se tiver alguma com problema eu corrijo, e 
+ desenho meu diagrama na (3FN).
+ 
+ * Um modelo Entidade-Relacionamento normalizado é facilmente traduzido em design de Banco de 
+   Dados relacional.
+
+ * A terceira Forma Normal é a meta geralmente aceita para um design de Banco de Dados Relacional.
+
+ 
+ 
+ PRIMAIRA FORMA NORMAL(1FN) - REGRA:
+ -----------------------------------
+ 
+ * Todos os Atributos da Entidade devem possuir um único valor para cada Instância da Entidade.
+ * Eliminação de Atributos multi-valorados
+   Ex: Atributo telefone é multi-valorado --> Pode ser comercial/residencial/celular
+   Esse exemplo viola a regra da Primeira Forma Normal(1FN).
+   
+   
+   
+   
+ SEGUNDA FORMA NORMAL(2FN) - REGRA:
+ ----------------------------------
+ 
+ * Um Atributo deve ser dependente de todo Identificador Único principal (UID 1) da Entidade.
+ 
+ * Eliminação de Atributos com dependência de apenas uma parte (parcial) do identificador
+   Único principal (UID 1)
+   
+ * Verifique se cada Atributo da Entidade é dependente de todo Identificador Único Principal.
+ * Caso houver algum Atributo que dependa de 'somente parte do Identificador Único principal',
+   este deve dar origem a uma nova Entidade, se ela não existir, se está Entidade já existir
+   este Atributo deverá migrar para esta Entidade.
+   
+ Obs: Utilizar um Identificador único Principal é uma boa prática, se estiver dessa forma, já
+      está normalizado de acordo com a segunda forma normal(2FN).]
+
+ 	  
+ TERCEIRA FORMA NORMAL(3FN) - REGRA:
+ -----------------------------------
+ 
+ * Nehum Atributo não único pode depender de Atributo não Único
+ * Eliminação de Atributos com dependência indireta ou eliminação de Atributos derivados 
+ (ou calculados).
+ 
+ Exemplo:
+ --------
+ 
+  PEDIDO
+ #*pedido_id   --> Não é derivado, não tem dependencia
+  *dt_pedido   --> Não é derivado, não tem dependencia
+  *situacao    --> Não é derivado, não tem dependencia
+  *soma_pedido   --> Isso viola a (3FN)  
+  
+  Solução:
+  --------
+  PEDIDO
+ #*pedido_id 	--> Não é derivado, não tem dependencia
+  *dt_pedido    --> Não é derivado, não tem dependencia
+  *situacao     --> Não é derivado, não tem dependencia
+  
+				--> Só eliminar o Atributo: *soma_pedido
+ 
+ Portanto, está normalizado na terceira forma normal(3FN) 
+	
+ Agora se existir um problema de performance muito forte, talvez tenha que quebrar essa regra,
+ porém, tem que ser tentado todas as formas de Tuning e hardware.
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+ 
+
+  
+				
+				
+				
+				
+				
+				
+				
+				
+				
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
