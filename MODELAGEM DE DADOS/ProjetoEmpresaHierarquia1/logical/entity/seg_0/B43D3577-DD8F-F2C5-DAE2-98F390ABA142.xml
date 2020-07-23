@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B43D3577-DD8F-F2C5-DAE2-98F390ABA142" name="DEPARTAMENTO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:14:46 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>DEPTO</preferredAbbreviation>
+<shortName>DEPTO</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="departamento_id" id="D2BA33E9-8756-4F17-D043-B174379A697D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:15:10 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="divisao_id" id="2D722CED-9D0A-835C-D3FA-229923D30948">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:21:36 UTC</createdTime>
+<generatorID>35FDEC88-144F-3B0A-BE00-9941D38CA2D2</generatorID>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>BDE60790-7137-BA22-8217-1C63327580D3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empresa_id" id="55935D86-4D2C-0A28-A52E-98214520DC42">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:24:18 UTC</createdTime>
+<generatorID>35FDEC88-144F-3B0A-BE00-9941D38CA2D2</generatorID>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>697323CF-7BA1-0299-348E-83F82D86C5D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B72597E9-617F-520E-540A-E5084ED65F44" name="DEPARTAMENTO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:15:25 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D2BA33E9-8756-4F17-D043-B174379A697D</attributeRef>
+<attributeRef>2D722CED-9D0A-835C-D3FA-229923D30948</attributeRef>
+<attributeRef>55935D86-4D2C-0A28-A52E-98214520DC42</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D458A6B2-BC69-D97A-CDBB-84BB98B3A78C" name="FUNCIONARIOv1">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:29:56 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaHierarquia1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>FUNC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="empregado_id" id="2AA542D7-E2A3-E982-61F4-CF45B614718E">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:29:56 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaHierarquia1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departamento_id" id="962989A6-6CF9-2A8F-06AF-A23531867E85">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:29:56 UTC</createdTime>
+<generatorID>9C311B5F-8249-83A7-19C1-C676CAB4FDC5</generatorID>
+<ownerDesignName>ProjetoEmpresaHierarquia1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>D02D7D7F-8C1C-3111-675F-4D6B30DFC93D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="D50A23C6-BE23-A6F9-04F3-E463B5A811B0">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:39:15 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaHierarquia1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="515C2893-2707-F4FF-D993-D944264EEC6D" name="FUNCIONARIO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:29:56 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaHierarquia1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2AA542D7-E2A3-E982-61F4-CF45B614718E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

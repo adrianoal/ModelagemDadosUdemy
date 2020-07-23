@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DadosHierarquicosRelacionamentoM1" id="896AE732-D785-63D0-5378-9907282D3865" version="3.5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:11:37 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>896AE732-D785-63D0-5378-9907282D3865</designId>
+</OSDM_Design>

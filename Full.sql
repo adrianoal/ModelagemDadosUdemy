@@ -931,7 +931,22 @@ Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
- 
+19.Modelando Dados Hierárquicos 
+
+ REPRESENTANDO DADOS HIERÁRQUICOS COM RELACIONAMENTOS M:1
+ --------------------------------------------------------
+
+ * Representando os dados hierárquicos como um conjunto de relacionamentos M:1.
+
+  Verificar no projeto: projetoEmpresaHierarquia1
+  
+ Em modelagem de dados, não tem apenas uma solução correta.
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+
+  
+  
 
   
 				

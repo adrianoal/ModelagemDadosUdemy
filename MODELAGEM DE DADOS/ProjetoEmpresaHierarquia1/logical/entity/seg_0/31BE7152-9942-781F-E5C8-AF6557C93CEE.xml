@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="31BE7152-9942-781F-E5C8-AF6557C93CEE" name="DIVISAO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:14:11 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>DIV</preferredAbbreviation>
+<shortName>DIV</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="divisao_id" id="BDE60790-7137-BA22-8217-1C63327580D3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:14:20 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empresa_id" id="697323CF-7BA1-0299-348E-83F82D86C5D2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:19:44 UTC</createdTime>
+<generatorID>35B93D5C-E63C-4F2A-0618-59E37EC39694</generatorID>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>37F4617A-4B66-6B78-DEF4-04EA97D1B863</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4D73F95C-2430-C131-6231-42684F019FAF" name="DIVISAO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:14:38 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BDE60790-7137-BA22-8217-1C63327580D3</attributeRef>
+<attributeRef>697323CF-7BA1-0299-348E-83F82D86C5D2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

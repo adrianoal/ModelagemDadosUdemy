@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="77B10101-87CE-82B5-0D2E-94B5AE934164">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:11:37 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

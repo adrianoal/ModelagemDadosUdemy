@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E80FED6D-2056-DA11-B6E3-993984F1B974" name="FUNCIONARIO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:15:28 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>FUNC</preferredAbbreviation>
+<shortName>FUNC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="empregado_id" id="0CC0D037-430E-6810-61ED-F67095B0E886">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:15:51 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departamento_id" id="7FC81461-6AAD-0829-6CFD-8076D9C4FA09">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:22:16 UTC</createdTime>
+<generatorID>406B8512-FBE6-C56B-65E8-F88492F12E8C</generatorID>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>D2BA33E9-8756-4F17-D043-B174379A697D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="divisao_id" id="8F9477AF-B40A-EDB6-F65E-EC7FB8405B54">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:24:27 UTC</createdTime>
+<generatorID>406B8512-FBE6-C56B-65E8-F88492F12E8C</generatorID>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>2D722CED-9D0A-835C-D3FA-229923D30948</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empresa_id" id="F6269254-D4A2-164B-BFA8-C3006179178B">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:24:27 UTC</createdTime>
+<generatorID>406B8512-FBE6-C56B-65E8-F88492F12E8C</generatorID>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<referedAttribute>55935D86-4D2C-0A28-A52E-98214520DC42</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D7DB2E2E-CF3B-53A9-D28D-2A1774743393" name="FUNCIONARIO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:16:13 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0CC0D037-430E-6810-61ED-F67095B0E886</attributeRef>
+<attributeRef>7FC81461-6AAD-0829-6CFD-8076D9C4FA09</attributeRef>
+<attributeRef>8F9477AF-B40A-EDB6-F65E-EC7FB8405B54</attributeRef>
+<attributeRef>F6269254-D4A2-164B-BFA8-C3006179178B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

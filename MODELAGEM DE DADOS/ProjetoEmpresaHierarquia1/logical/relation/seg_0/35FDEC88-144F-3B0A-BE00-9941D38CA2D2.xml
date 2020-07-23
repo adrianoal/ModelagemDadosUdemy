@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="divisao_departamento" directorySegmentName="seg_0" id="35FDEC88-144F-3B0A-BE00-9941D38CA2D2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 17:21:36 UTC</createdTime>
+<ownerDesignName>DadosHierarquicosRelacionamentoM1</ownerDesignName>
+<engineerTo>
+<item key="491A4F83-3FF0-8539-77D3-C2480360BCB3" value="true"/>
+</engineerTo>
+<sourcePk>4D73F95C-2430-C131-6231-42684F019FAF</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>31BE7152-9942-781F-E5C8-AF6557C93CEE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B43D3577-DD8F-F2C5-DAE2-98F390ABA142</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
