@@ -944,8 +944,53 @@ Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+20.Resolvendo Relacionamentos M para M 
 
+ Como se resolve um relacionamento M:M ?
+ ---------------------------------------
+
+ * Resolva um relacionamento M:M adicionando uma Entidade de Intersecção, que chamamos de 
+   Entidade Associativa entre as duas Entidades.
+   
+ * Os relacionamentos com as Entidades originais serão parte do identificador Único da Entidade 
+   Associativa e estes relacionamentos serão obrigatórios.
+   
+ Obs: Não pode ir para a faze de Design sem resolver os relacionamentos de M:M.
+ 
+	INSTRUTOR				INSTRUTOR_CURSO				  CURSO 
+  #*instrutor_id			  *instrutor_curso_id		#*curso_id
+   *nome   					    					   	 *codigo
+														*nome	
+														*preco
+														*diracao
+												   
+ Com a solução acima se surgir a necessidade de novos atributos na Entidade assiciativa, não
+ tem problema. 
   
+ A resolução desse relacionamento de M:M foi resolvida com uma entidade associativa.
+ 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   
 
   

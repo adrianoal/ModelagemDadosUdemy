@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8B49503A-AFDA-C17D-0102-FA3E43283D73" name="CURSO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E8D5A3FA-EB19-62F7-8F95-9661E5C4E73A" name="INSTRUTOR_CURSO">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:35:56 UTC</createdTime>
+<createdTime>2020-07-23 18:38:44 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
@@ -14,13 +14,13 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>CRSO</preferredAbbreviation>
-<shortName>CRSO</shortName>
-<synonym>TREINAMENTO</synonym>
+<preferredAbbreviation>INST</preferredAbbreviation>
+<shortName>INST</shortName>
+<synonym>HABILITACAO</synonym>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="curso_id" id="624BCC2B-9128-4316-D3A6-E6243AC8C538">
+<Attribute name="instrutor_curso_id" id="AE94902B-604E-5A58-C9B6-8114632FF2BE">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:39:51 UTC</createdTime>
+<createdTime>2020-07-23 18:53:04 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
@@ -31,49 +31,39 @@
 <dataTypePrecision>18</dataTypePrecision>
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="codigo" id="23A3EA40-DE4A-47CC-2409-CDEB4686EFB1">
+<Attribute name="instrutor_id" id="AA6892DD-7791-2817-621D-A414D98E2D90">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:40:12 UTC</createdTime>
+<createdTime>2020-07-23 18:43:11 UTC</createdTime>
+<generatorID>2414BFE8-0FFC-FB1E-B5F4-AE25E4F2DF9A</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nome" id="C9858FBD-75AF-6CFF-CB0D-1278835E21E7">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:41:32 UTC</createdTime>
-<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
-<engineerTo>
-<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>40</dataTypeSize>
-<ownDataTypeParameters>40,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="preco" id="A6577572-E7D6-7C39-0840-83C20561E4DF">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:41:59 UTC</createdTime>
-<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
-<engineerTo>
-<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
-</engineerTo>
+<referedAttribute>D196419F-1A90-E1F6-03CD-C0F06388425C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="duracao" id="A3EAD9E9-FDF1-0A45-8D2D-11807134D309">
+<Attribute name="curso_id" id="43F2AD22-AA7A-5EB0-0DB7-7A6BDF42A5AD">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-21 14:42:56 UTC</createdTime>
+<createdTime>2020-07-23 18:44:02 UTC</createdTime>
+<generatorID>311FAD1C-E7FB-0DE5-3499-B5DA2CCDFE93</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<referedAttribute>624BCC2B-9128-4316-D3A6-E6243AC8C538</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="taxa_hora" id="53F6AFF5-1757-B4C4-F88E-714FA1A843D1">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 18:46:11 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
@@ -81,34 +71,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>6</dataTypePrecision>
+<dataTypePrecision>11</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="059D6986-6851-03BA-C7F7-DD7507FE3A51" name="CURSO PK">
+<identifier id="84896AD0-B3FE-6BDF-57D2-50AF1EDD730C" name="INSTRUTOR_CURSO PK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-22 16:52:26 UTC</createdTime>
+<createdTime>2020-07-23 18:43:11 UTC</createdTime>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <engineerTo>
 <item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>624BCC2B-9128-4316-D3A6-E6243AC8C538</attributeRef>
-</usedAttributes>
-</identifier>
-<identifier id="05F5836A-BFEC-AA36-C1D2-93A428EA7BF6" name="Key_2">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-07-22 16:53:42 UTC</createdTime>
-<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
-<engineerTo>
-<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
-</engineerTo>
-<newElementsIDs>23A3EA40-DE4A-47CC-2409-CDEB4686EFB1</newElementsIDs>
-<usedAttributes>
-<attributeRef>23A3EA40-DE4A-47CC-2409-CDEB4686EFB1</attributeRef>
+<attributeRef>AE94902B-604E-5A58-C9B6-8114632FF2BE</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
