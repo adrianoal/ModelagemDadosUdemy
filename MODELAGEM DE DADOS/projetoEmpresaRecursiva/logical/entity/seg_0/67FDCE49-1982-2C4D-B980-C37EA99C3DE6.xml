@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="67FDCE49-1982-2C4D-B980-C37EA99C3DE6" name="ELEMENTO_ORGANIZACIONAL">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:12:55 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>ELEOR</preferredAbbreviation>
+<shortName>ELEOR</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="elemento_organizacinal_id" id="821C7937-7D57-BFB0-9DB0-30B5A8C7ED65">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:13:19 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="7A3D26B8-3205-8EF9-F37C-65A7DD8F66AF">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:13:35 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_elemento_organizacional_id" id="8245458C-899A-FF9A-514F-10DE8AC37F2B">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:17:41 UTC</createdTime>
+<generatorID>42FE2A88-18B5-EABF-6624-E834C7C08D26</generatorID>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<referedAttribute>023E8A31-2B28-E284-63A7-5CA3F6159C31</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

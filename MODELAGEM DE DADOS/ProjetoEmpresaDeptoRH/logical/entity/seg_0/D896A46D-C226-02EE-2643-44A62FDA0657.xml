@@ -151,7 +151,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="empregado_id1" id="4DC86B18-5D58-C3FB-E897-217DC67D65BB">
 <createdBy>aalima5</createdBy>

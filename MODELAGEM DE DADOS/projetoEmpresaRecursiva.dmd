@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="projetoEmpresaRecursiva" id="B611C705-261E-9048-7310-1B0B251512B1" version="3.5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:10:30 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>B611C705-261E-9048-7310-1B0B251512B1</designId>
+</OSDM_Design>

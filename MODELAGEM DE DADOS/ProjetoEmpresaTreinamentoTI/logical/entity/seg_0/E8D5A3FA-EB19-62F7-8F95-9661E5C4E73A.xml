@@ -89,5 +89,18 @@
 <attributeRef>AE94902B-604E-5A58-C9B6-8114632FF2BE</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="8BAB393A-0413-5C7C-B76D-984D85CA86A1" name="Key_2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 18:54:17 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<engineerTo>
+<item key="C40921B6-5D07-B6FB-CAC2-29BE18A27265" value="true"/>
+</engineerTo>
+<newElementsIDs>2414BFE8-0FFC-FB1E-B5F4-AE25E4F2DF9A,311FAD1C-E7FB-0DE5-3499-B5DA2CCDFE93</newElementsIDs>
+<usedAttributes>
+<attributeRef>AA6892DD-7791-2817-621D-A414D98E2D90</attributeRef>
+<attributeRef>43F2AD22-AA7A-5EB0-0DB7-7A6BDF42A5AD</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TIPO_ELEM_ORG_ELEM_ORG" directorySegmentName="seg_0" id="42FE2A88-18B5-EABF-6624-E834C7C08D26">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:17:41 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<sourcePk>37B46192-81AB-0437-452B-C52C0CEDD233</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>45F304AF-25FE-5A35-AA87-4F865AF38CD8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>67FDCE49-1982-2C4D-B980-C37EA99C3DE6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

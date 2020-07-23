@@ -972,6 +972,40 @@ Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+21.Relacionamento Recursivos
+
+ * Um relacionamento recursivo é um relacionamento entre uma Entidade e ela mesma.
+ 
+ Representando Dados Hierárquicos como Relacionamentos M:1
+ ---------------------------------------------------------
+ 
+ Exemplo:
+ --------
+ 
+ Modelando o relacionamento recursivo da Entidade Empregado com ela mesma.
+ 
+ 
+	EMPREGADO
+  #*empregado_id
+   *nome
+   *dt_nascimento
+   *salario
+   *percentual_comissao
+   
+ Cada Empregado deve ser gerenciado por um e somente um Empregado.
+ Cada Empregado pode ser gerente de um ou mais Empregados.
+ 
+ Um exemplo no projeto: 
+						ProjetoEmpresaRecursiva
+					
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+ 
+ 
+   
+   
+   
  
  
  

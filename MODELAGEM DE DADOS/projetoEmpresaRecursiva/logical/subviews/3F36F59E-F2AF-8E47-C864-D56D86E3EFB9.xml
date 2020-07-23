@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="3F36F59E-F2AF-8E47-C864-D56D86E3EFB9">
+<createdBy>aalima5</createdBy>
+<modifiedBy>aalima5</modifiedBy>
+<createdTime>2020-07-23 19:10:37 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="45F304AF-25FE-5A35-AA87-4F865AF38CD8" otype="Entity" vid="84FC3236-0E92-1BF2-01ED-12AF35D04AD1">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="49" y="77" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="67FDCE49-1982-2C4D-B980-C37EA99C3DE6" otype="Entity" vid="6DA8ABA1-A680-608E-36E4-7C57F59A6AA8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="545" y="76" width="170" height="110"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="42FE2A88-18B5-EABF-6624-E834C7C08D26" otype="Relation" vid_source="84FC3236-0E92-1BF2-01ED-12AF35D04AD1" vid_target="6DA8ABA1-A680-608E-36E4-7C57F59A6AA8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="219" y="131"/>
+<point x="545" y="131"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="F0B4B4B5-1530-0949-DABA-E43614CE314B" otype="Relation" vid_source="6DA8ABA1-A680-608E-36E4-7C57F59A6AA8" vid_target="6DA8ABA1-A680-608E-36E4-7C57F59A6AA8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="715" y="140"/>
+<point x="740" y="140"/>
+<point x="740" y="211"/>
+<point x="645" y="211"/>
+<point x="645" y="186"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

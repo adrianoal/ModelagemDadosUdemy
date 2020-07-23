@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="45F304AF-25FE-5A35-AA87-4F865AF38CD8" name="TIPO_ELEMENTO_ORGANIZACIONAL">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:14:52 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>TIPE</preferredAbbreviation>
+<shortName>TIPE</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="tipo_elemento_organizacional_id" id="023E8A31-2B28-E284-63A7-5CA3F6159C31">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:15:28 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="22180133-F071-24AD-7937-3F3D6B4B8460">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:15:54 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="37B46192-81AB-0437-452B-C52C0CEDD233" name="TIPO_ELEMENTO_ORGANIZACIONAL PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-23 19:15:49 UTC</createdTime>
+<ownerDesignName>projetoEmpresaRecursiva</ownerDesignName>
+<engineerTo>
+<item key="C8BAD7DA-D31F-971B-4940-EC6CA3AD5482" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>023E8A31-2B28-E284-63A7-5CA3F6159C31</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
