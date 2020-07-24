@@ -1204,8 +1204,20 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
-  
+28.Implementação de Relacionamentos Exclusívos(Arcos)
+
  
+ 6.Implementação de arco
+ 
+ * Mapeie cada relacionamento pertencente ao arco para uma coluna chave estrangeira(FK), a coluna deve 
+   permitir nulos.
+   
+ * Implemente uma regra de negócio que abrigue que as chaves estrangeiras pertencentes ao arco
+   sejam exclusivas.
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+    
    
     
  
