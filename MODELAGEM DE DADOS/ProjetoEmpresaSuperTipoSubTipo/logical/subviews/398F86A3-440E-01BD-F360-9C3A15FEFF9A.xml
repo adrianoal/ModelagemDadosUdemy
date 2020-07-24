@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="398F86A3-440E-01BD-F360-9C3A15FEFF9A">
+<createdBy>aalima5</createdBy>
+<modifiedBy>aalima5</modifiedBy>
+<createdTime>2020-07-24 13:16:27 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="364619A4-D645-AC72-32B5-95F47383CF1A" otype="Entity" vid="7571DE8A-FF76-AB5C-1F94-6DC8B713CAD0">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="25" y="33" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="4EAFCBCE-816B-E535-F64C-9DA1B2AEFC98" otype="Entity" vid="013C62C3-6F5F-BC4F-2EE2-100A88C96285">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="373" y="27" width="333" height="454"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="88174340-3C5A-6A9D-CDA4-C95CE821363D" otype="Entity" vid="A16F43B3-8271-7324-E439-E3F3900C2F7F">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="391" y="280" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="C62D1EB7-284B-9937-AE8F-18B4AA1F37F4" otype="Entity" vid="5D2D0474-4C24-3A88-A012-1E535D99DD6E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="395" y="130" width="170" height="110"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="A29964EA-D48C-9825-FECB-9EE8D50F0C5B" otype="Relation" vid_source="7571DE8A-FF76-AB5C-1F94-6DC8B713CAD0" vid_target="013C62C3-6F5F-BC4F-2EE2-100A88C96285">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="195" y="88"/>
+<point x="373" y="88"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

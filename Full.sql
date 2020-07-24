@@ -1001,15 +1001,38 @@ Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+22.Supertipos e Subtipos
+
+ * Use Supertipos e Subtipos para modelar tipos exclusivos de Entidades que possuam Atributos
+   ou Relacionamentos comuns.
+   
+ EXEMPLO:
+ --------
+
+ Um EMPREGADO é MENSALISTA ou HORISTA, exclusivamente.
  
- 
+	DEPARTAMENTO				EMPREGADO
+  #*departamento_id			  #*empregado_id
+   *nome 					   *nome	
+							   *dt_nascimento
    
    
-   
+								MENSALISTA 
+							  #*salario 
+
+								HORISTA
+							  #*taxa_hora
+							   *taxa_hora_extra
+							   
+							   
+							   
+ Portanto, as classes MENSALISTA e HORISTA são subclasses da Entidade EMPREGADO.
+
+ Na prática, se usa esse tipo de modelagem como último recurso.  
  
- 
- 
- 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+23. 
  
  
  
