@@ -1217,9 +1217,84 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
-    
+29.Implementação de Supertipos e Subtipos 
+
+ 7.Escolher as opções de implementações para supertipo e subtipos
+
+ ALTERNATIVAS:
+ -------------
+
+ * Implementação com uma ínica tabela(tabelão) 
+ 
+ * Implementação de uma tabela para cada subtipo 
+ 
+ 1. Crie uma única tabela para mapear o supertipo
+ 2. Crie uma coluna TIPO para identificar para que subtipo cada linha da tabela pertence.
+ 3. Crie uma coluna para cada Atributo do Supertipos
+ 4. Crie uma coluna para cada atributo dos Supertipo
+ 5. Crie uma coluna para cada atributo dos Subtipo 
+ 6.Crie uma coluna FK para cada relacionamento dos Subtipos 
+ 
+ Vantagens dessa implementação:
+ ------------------------------
+ 
+ * Acesso as instâncias do supertipo direto e rápido
+ * Acesso as instâncias do Subtipos direto e rápido
+ * Permite a criação de visões para minipulação dos Subtipos
+ * As colunas não utilizadas pelo subtipo terão valor NULL, logo não haverá grandes 
+ desperdício de espaço.
+ 
+ Desvantagens dessa implementação:
+ ---------------------------------
+ 
+ * Atributos obrigatórios dos subtipos não serão implementados como NOT NUL a nível de banco 
+   de dados. Isto poderá ser implementado através de uma database trigger.
    
+ * Os relaionamentos obrigatórios dos subtipos não serão implementados como colunas NOT NULL 
+   a nível de banco de dados. Isto poderá ser implementado através de uma database trigger.
+   
+ * A aplicação sempre deverá tratar a coluna TIPO para manipular os subtipos.
+
+ Alternativas 2 para Supertipos e Subtipos:
+ ------------------------------------------
+ 
+ 1 Crie uma tabela para mapear o subtipo a ser implementado.
+ 
+ 2 Crie uma coluna para cada Atributo do Supertipo 
+ 
+ 3 Crie uma coluna para cada atributo do Subtipo a ser implementado
+ 
+ 4 Crie uma coluna FK para cada relacionamento do Supertipo 
+ 
+ 5 Crie uma coluna FK para cada relacionamento do Subtipo a ser implementada 
+ 
+ 6 Repita os passos acima para cada um dos Subtipos 
+ 
+ 
+ Vantagens:
+ ---------- 
+ 
+ * Atributos obrigatórios dos subtipos serão implementados a nível de banco de dados como colunas 
+   NOT NULL.
+   
+ * Os relacionamentos obrigatórios dos subtipos serão implementados a nível de banco de dados
+   como colunas FK e NOT NULL.
+
+ Desvantagens:
+ -------------
+ 
+ * Acesso as instâncias do Supertipo requerem um SELECT nas tabelas dos suptipos como o operador
+   UNION, também, é possível criar uma visão para isto.
+   
+ * A manutenção das chaves primárias dos subtipos pode se tornar mais complexa.
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------        
     
+ 
+ 
+   
+
  
  
  
