@@ -1106,14 +1106,38 @@ opções.
   Resolução:
   ----------
 			ProjetoContratoAlternativa1  --> Solução proposta pela ORACLE
-			ProjetoContratoAlternativa2  --> Solição alternativa, uma boa prática também
+			ProjetoContratoAlternativa2  --> Solução alternativa, uma boa prática também
 			
  As duas estão corretas!!!
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+25.Relacionamentos Complexos
 
  
+ * Relacionamentos complexos são relacionamentos M:M entre mais de 2 Entidades formando um Anel
+ 
+ Exemplo:
+ --------
+ 
+ Desenvolva um modelo ER para o histórico de empregos.
+ 
+ Para cada PESSOA, resgistre os CARGOS no decorrer do tempo. As EMPRESAS para as quais 
+ trabalhou, as datas para cada EMPRESA e para cada CARGO. Uma PESSOA pode ocupar vários CARGOS 
+ dentro da mesma EMPRESA, com início em datas diferentes a sua carreira.
+ 
+ Em algumas situações a  modelagem de dados, não vai conseguir resolver todos os problemas,
+ algumas situações terão que ser resolvidas com regra de negócio, através de processos ou 
+ código da aplicação.
+ 
+ Solução padrão da Oracle para relacionamentos complexos:
+													ProjetoEmpresaRHRelacionamentosComplexos1
+													ProjetoEmpresaRHRelacionamentosComplexos2 
+		 2º Alternativa uma boa prática também...		
+ 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
  
  
  

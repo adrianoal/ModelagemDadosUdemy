@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="24326E4E-D39A-170F-B53A-D223266F0F18" name="EMPRESA_CARGO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:58:05 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos1</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>EMPC</preferredAbbreviation>
+<shortName>EMPC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="dt_inicio" id="4231EC53-711A-AB52-B946-2C02F3C07DA8">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:58:26 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos1</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empresa_id" id="AE572169-CC81-0273-5622-37D0A0E01A88">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:01:34 UTC</createdTime>
+<generatorID>B76D3880-BDF3-313D-5808-4A823301FE62</generatorID>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos1</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<referedAttribute>F5AE6A96-488D-CE96-7891-B4E5AA70CBA0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cargo_id" id="24FF0D93-8216-5800-8315-C842780B9DEC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:02:02 UTC</createdTime>
+<generatorID>B35D4DB2-B96B-97B8-6569-6A2CBD996A3C</generatorID>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos1</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<referedAttribute>945F563C-DB1F-4839-9AEF-6EBEBB7D5EFB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="39986A19-A64B-7BCA-F63C-62E461850149" name="EMPRESA_CARGO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:58:48 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos1</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4231EC53-711A-AB52-B946-2C02F3C07DA8</attributeRef>
+<attributeRef>AE572169-CC81-0273-5622-37D0A0E01A88</attributeRef>
+<attributeRef>24FF0D93-8216-5800-8315-C842780B9DEC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EMPRESA_PESSOA_EMPRESA" directorySegmentName="seg_0" id="DB736F24-43C6-9AE2-122A-F9C67F6C5DD7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:01:14 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<sourcePk>94765D42-E762-189A-92F4-2D710F55F9D5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>ED0664FE-09D3-3CD9-CB5F-CCC99DE53D72</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>743A78ED-60D7-2EC5-89AE-AB9791E8A7F6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

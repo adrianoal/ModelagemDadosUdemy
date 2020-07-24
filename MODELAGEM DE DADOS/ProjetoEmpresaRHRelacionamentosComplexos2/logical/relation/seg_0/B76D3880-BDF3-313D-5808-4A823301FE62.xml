@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EMPRESA_EMPRESA_CARGO" directorySegmentName="seg_0" id="B76D3880-BDF3-313D-5808-4A823301FE62">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:01:34 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<sourcePk>94765D42-E762-189A-92F4-2D710F55F9D5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>ED0664FE-09D3-3CD9-CB5F-CCC99DE53D72</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>24326E4E-D39A-170F-B53A-D223266F0F18</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

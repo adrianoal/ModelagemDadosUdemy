@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="743A78ED-60D7-2EC5-89AE-AB9791E8A7F6" name="PESSOA_EMPRESA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:57:14 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>EMPE</preferredAbbreviation>
+<shortName>EMPE</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pessoa_empresa_id" id="D48BACC0-E1FD-68FB-5B59-E283E0D4A97D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:11:28 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio" id="2D0D6397-CE53-C2DA-2F31-75CD5BEB722D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:57:41 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pessoa_id" id="8C63681D-B40D-F594-A628-5FB85DCF354A">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:00:43 UTC</createdTime>
+<generatorID>5C95B60C-B191-437A-1A58-E1EB65C2E19A</generatorID>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<referedAttribute>7DB17571-6275-C1C4-AA9B-BF6F4648E5B1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empresa_id" id="45365467-192C-374B-78DF-E3F64FDEF4B4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:01:14 UTC</createdTime>
+<generatorID>DB736F24-43C6-9AE2-122A-F9C67F6C5DD7</generatorID>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<referedAttribute>F5AE6A96-488D-CE96-7891-B4E5AA70CBA0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A409F85B-509B-4A5C-2400-07F34789DEA8" name="PESSOA_EMPRESA PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:57:53 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D48BACC0-E1FD-68FB-5B59-E283E0D4A97D</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="6A495C83-7D0F-0DEB-298D-F7009371D6DA" name="Key_2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 15:12:57 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRHRelacionamentosComplexos2</ownerDesignName>
+<engineerTo>
+<item key="10B8FD06-3FBF-420C-6EA7-9D2D368EEF46" value="true"/>
+</engineerTo>
+<newElementsIDs>2D0D6397-CE53-C2DA-2F31-75CD5BEB722D,5C95B60C-B191-437A-1A58-E1EB65C2E19A,DB736F24-43C6-9AE2-122A-F9C67F6C5DD7</newElementsIDs>
+<usedAttributes>
+<attributeRef>2D0D6397-CE53-C2DA-2F31-75CD5BEB722D</attributeRef>
+<attributeRef>8C63681D-B40D-F594-A628-5FB85DCF354A</attributeRef>
+<attributeRef>45365467-192C-374B-78DF-E3F64FDEF4B4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
