@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ProjetoContratoAlternativa2" id="BD92CAD7-54AD-DAE3-A88A-4B2677BCDDE1" version="3.5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:30:42 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BD92CAD7-54AD-DAE3-A88A-4B2677BCDDE1</designId>
+</OSDM_Design>

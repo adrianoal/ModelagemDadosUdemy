@@ -1058,8 +1058,61 @@ Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
     
  Esse relacionamento também é raro de usar, só é utilizado essa solução quando não tem outras 
 opções. 
+
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+24.Modelando Dados Considerando o Tempo 
+
+ * Crie Entidades Histórico para o modelo ER contemplar os dados em relação ao Tempo.
+ 
+ CONSIDERANDO O TEMPO:
+ ---------------------
+ 
+ Para cada Entidade, verifique:
+ 
+ * É necessário guardar registros históricos para auditoria?
+ 
+ * Os valores registrados podem ser alterados com o passar do tempo? É necessário manter um 
+   histórico destas alterações?
+   
+ Os relacionamentos podem ser alterados com o passar do tempo? É necessário manter um histórico   
+ destas alterações?
+ 
+ * Você precisa consultar registros antigos?
+ 
+ * Você precisa manter versões anteriores?
+ 
+ CONSIDERAÇÕES:
+ --------------
+ 
+ * Valide quaisquer exigências de armazenamento de dados históricos com o usuário.
+ 
+ * O armazenamento de dados históricos desnecessários pode ter um custo alto, tais como:
+   Consumo de espaço em disco, queda de performance, aumento do espaço em disco do banco de 
+   dados e pelos backups, aumento do tempo realização do backup, etc.
+   
+ Em resumo se criar uma entidade histórico desnecessário, está criando um problema de 
+ performance.   
+ 
+ MODELANDO DADOS CONSIDERANDO O TEMPO:
+ -------------------------------------
+
+ Uma analogia é o extrato da conta corrente.
+ Tem uma Entidade CONTA CORRENTE, por exemplo, e uma Entidade HISTORICO CONTA CORRENTE.
+
+ Essa é a solução padrão para criar um histórico na metodologia da Oracle.
+ 
+ 
+  Resolução:
+  ----------
+			ProjetoContratoAlternativa1  --> Solução proposta pela ORACLE
+			ProjetoContratoAlternativa2  --> Solição alternativa, uma boa prática também
+			
+ As duas estão corretas!!!
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+
  
  
  

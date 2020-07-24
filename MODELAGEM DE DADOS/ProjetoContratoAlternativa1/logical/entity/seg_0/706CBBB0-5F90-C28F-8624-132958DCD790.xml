@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="706CBBB0-5F90-C28F-8624-132958DCD790" name="HISTORICO_CONTRATO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:20:41 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>HIST</preferredAbbreviation>
+<shortName>HIST</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="dt_historico" id="E5ACD581-C552-CCDA-A691-4A19048264A5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:22:45 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio" id="DDD6C9BB-29BF-1DB8-E687-0DAD87C80001">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:24:22 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_prevista_entrega" id="8A8026B4-4E37-EB52-BE48-4CCAFF787194">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:24:37 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_entrega" id="BE164669-9022-9531-0667-11419BBA6EB4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:24:57 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="situacao" id="124EC7F9-F143-D8F6-F564-B63C4B23792E">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:25:15 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descricao" id="7FCE9751-CFFE-66E0-107B-B33042C7E8A6">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:26:03 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor" id="6509C990-6E7F-3312-A71A-BF0646342293">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:26:57 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contrato_id" id="C6891A7E-DBAB-24E6-54DC-4EDFBB9396A3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:27:40 UTC</createdTime>
+<generatorID>0BB5840B-6060-AFF5-6336-151F29CB2D24</generatorID>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<referedAttribute>37162DB8-8640-2D38-917B-7F3A6637C1E8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C5162B9-9DD4-A008-06BB-A7EDC1A777C4" name="HISTORICO_CONTRATO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 14:23:40 UTC</createdTime>
+<ownerDesignName>ProjetoContratoAlternativa1</ownerDesignName>
+<engineerTo>
+<item key="D1B81FA8-E32C-EEDB-BA55-68FA08F7D0C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E5ACD581-C552-CCDA-A691-4A19048264A5</attributeRef>
+<attributeRef>C6891A7E-DBAB-24E6-54DC-4EDFBB9396A3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
