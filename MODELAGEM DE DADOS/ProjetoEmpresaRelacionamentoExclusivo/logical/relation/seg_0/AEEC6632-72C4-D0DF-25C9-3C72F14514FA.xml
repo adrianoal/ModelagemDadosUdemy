@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PESSOA_JURIDICA_CONTA_CORRENTE" directorySegmentName="seg_0" id="AEEC6632-72C4-D0DF-25C9-3C72F14514FA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:48:06 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<sourcePk>69703F59-DB1E-3D75-5A1E-6D9B313B00DE</sourcePk>
+<arc>F5E7B88A-19F2-CB94-4440-25C404EC5516</arc>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F100EFAA-A5E8-048E-4BE7-8146C8FC081D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A9585DE3-83F3-E196-CB6F-39E038E70CD8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1032,9 +1032,34 @@ Seção 5:Modelagem de dados - Modelagem de dados Avançada(Detalhada)
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
-23. 
+23.Relacionamentos Exclusivos
+
+ * Modele dois ou mais relacionamentos exclusivos a partir da mesma Entidade utilizando um Arco.
+ 
+ Exemplo:
+ 
+ CONTA CORRENTE         PESSOA FISICA
  
  
+						PESSOA JURIDICA
+
+
+ Ou seja, uma instância de conta corrente ou é PF ou é PJ, logo esse relacioanemto é exclusivo.
+ 
+ Em caso de dúvida verificar o projeto: ProjetoEmpresaRelacionamentoExclusivo
+ 
+ * Os Relacionamentos em um Arco devem ser todos obrigatórios ou todos opcionais.
+ 
+ * Os Relacionamentos em Arco devem ter a mesma cardinalidade
+ 
+ * Uma Entidade pode ter múltiplos Arcos, mas um Relacionamento expecífico só pode participar 
+   de um único Arco.
+   
+    
+ Esse relacionamento também é raro de usar, só é utilizado essa solução quando não tem outras 
+opções. 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
  
  
  

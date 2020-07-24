@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E004FEDE-DB1F-03DB-D7FE-80AAD39375EB" name="AGENCIA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:46:03 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>AGEN</preferredAbbreviation>
+<shortName>AGEN</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="codigo" id="4BB78C39-A092-2987-C295-6452185E05C1">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:46:20 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="codigo1" id="2970EF9C-B6ED-E22F-54A2-B0DC5A2BFDF1">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:51:26 UTC</createdTime>
+<generatorID>7F7931DB-FAD8-2812-7125-C7C00BA33A89</generatorID>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<referedAttribute>FA407020-52CC-4508-476D-405A156AC136</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="65E4CB39-242F-E6AC-D49D-D945CADDF3BF" name="AGENCIA PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:46:35 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4BB78C39-A092-2987-C295-6452185E05C1</attributeRef>
+<attributeRef>2970EF9C-B6ED-E22F-54A2-B0DC5A2BFDF1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

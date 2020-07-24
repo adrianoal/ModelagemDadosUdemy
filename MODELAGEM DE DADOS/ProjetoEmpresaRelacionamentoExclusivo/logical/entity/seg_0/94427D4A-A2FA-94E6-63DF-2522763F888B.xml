@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="94427D4A-A2FA-94E6-63DF-2522763F888B" name="PESSOA_FISICA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:41:19 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>PF</preferredAbbreviation>
+<shortName>PF</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pessoa_fisica_id" id="D503F4BB-15D3-595D-BF56-A61B1DF2F978">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:41:47 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0F323260-BC1C-00D8-BEC5-7A1C61C5FE8C" name="PESSOA_FISICA PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:42:04 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D503F4BB-15D3-595D-BF56-A61B1DF2F978</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

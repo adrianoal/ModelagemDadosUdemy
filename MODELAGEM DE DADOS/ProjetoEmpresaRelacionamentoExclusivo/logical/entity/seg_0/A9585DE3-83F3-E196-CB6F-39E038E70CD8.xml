@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A9585DE3-83F3-E196-CB6F-39E038E70CD8" name="CONTA_CORRENTE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:47:01 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>CCOR</preferredAbbreviation>
+<shortName>CCOR</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="numero" id="247E9097-37C2-9920-54F0-32774B561066">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:47:25 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="codigo" id="1D96B312-D721-CB96-C100-6600D3A8B454">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:52:37 UTC</createdTime>
+<generatorID>AC16E286-B2CB-034E-2D64-70D84EE419A9</generatorID>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<referedAttribute>4BB78C39-A092-2987-C295-6452185E05C1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="codigo1" id="DF71FD5A-A64E-A7C7-281F-A22490B726E3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:52:37 UTC</createdTime>
+<generatorID>AC16E286-B2CB-034E-2D64-70D84EE419A9</generatorID>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<referedAttribute>2970EF9C-B6ED-E22F-54A2-B0DC5A2BFDF1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pessoa_fisica_id" id="1AB07688-431F-5CCA-D3DB-FAB10414E6F5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:46:31 UTC</createdTime>
+<generatorID>6B40DB2C-9F51-5345-B157-080ABEFECA15</generatorID>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<referedAttribute>D503F4BB-15D3-595D-BF56-A61B1DF2F978</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pessoa_juridica_id" id="331FE234-3364-512B-B269-4FE17130C796">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-24 13:48:06 UTC</createdTime>
+<generatorID>AEEC6632-72C4-D0DF-25C9-3C72F14514FA</generatorID>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<referedAttribute>4C51038C-A361-1324-9F5B-E2BCB2E32E61</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1BCC0221-945A-F332-7AF8-CCF3418FA9AE" name="CONTA_CORRENTE PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-22 22:47:44 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaRelacionamentoExclusivo</ownerDesignName>
+<engineerTo>
+<item key="61DBDB50-0F1C-DEC7-3B74-7770AE18D861" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>247E9097-37C2-9920-54F0-32774B561066</attributeRef>
+<attributeRef>1D96B312-D721-CB96-C100-6600D3A8B454</attributeRef>
+<attributeRef>DF71FD5A-A64E-A7C7-281F-A22490B726E3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
