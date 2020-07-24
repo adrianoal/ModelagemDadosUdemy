@@ -1138,8 +1138,49 @@ opções.
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados 
+
+26.Fases do database Design
+
+ OBJETIVOS:
+ ----------
+ 
+ * Traduzir um modelo ER em um Desig(Projeto) de Banco de Dados Relacional.
+ 
+ * Documentar o Design de banco de Dados utilizando Quadros de instância de tabela.
+ 
+ * O Design de banco de Dados é executado durante a fase de Design da Metofologia ORACLE.
+ 
+ * Somente passe para a Fase de Design após o encerramento formal da fase de Análise do negócio.
+ 
+ * Faça um encerramento formal da fase de Análise de negócio obtendo o Aceite do usuário.
  
  
+ FASES DO MODELO DE DADOS DETALHADO:
+ -----------------------------------
+ 
+ 1. Produza um Design Inicial de Banco de Dados, mapenado o Modelo ER para um Projeto(Design)
+ físico inícial de Banco de Dados Relacional.
+ 
+ 2. Refine o Projeto(Design) Físico inicial de Bancop de Dados Relacional de modo a produzir
+    o Projeto completo e refinado.
+	
+ O Oracle Database SQl Developer Data Modeler tem um utilitario para criar o Projeto de dados
+ de forma automática.
+ 
+ PRODUTOS DO DESIGN DE BANCO DE DADOS:
+ -------------------------------------
+ 
+ * A Fase de Design de Banco de Dados produz especificações de projeto(Design) para um Banco 
+   de Dados Relacional incluindo definições de tabelas, colunas, constraints, indíces, visões
+   e espaço de armazenamento.
+   
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+
+ 
+   
+    
  
  
  
