@@ -1177,7 +1177,34 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
    
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------       
+27.Database Design Inicial
 
+ PASSOS PARA A CRIAÇÃO DE UM DATABASE DESIGN INICIAL:
+ ----------------------------------------------------
+ 
+ 1.Mapear as entidades simples para tabelas
+ 2.Mapear os atributos da entidade para colunas da tabela
+ 3.Mapear identificadores únicos para constraints de primary key(PK) ou unique(UK)
+ 4.Mapear relacionamentos para constraints de foreign key(FK)
+ 5.Mapear as foreign keys(FK) originadas de relacionamentos que compõesm identificadores únicos
+   principais para colunas que compõesm a primary key(PK)
+ 6.Implementação de arco
+ 7.Escolher as opções de implementações para supertipo e subtipos
+ 
+ Obs: Na fase conceitual e lógica o nome de Entidades são no singular.
+	  Na fase física o nome de Entidades vira tabelas no plural.
+  
+ Fazer esse mapeamentos em uma planilha de Excel.	  
+ 
+ Na fase física:
+ ---------------
+ 
+ Identificadores únicos princípais viram PK, UK, FK 
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------       
+  
  
    
     
