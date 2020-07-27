@@ -1321,6 +1321,23 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
  Pode ser criado um índice para todas as 'colunas' que são Foreign KEY, isso é uma boa prática, 
  e deve ser criado.
  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------         
+32.Avaliar necessidade de Desnormalização
+
+ * Defenda sempre o Modelo de Dados Normalizado
+ * Só realize uma desnormalização em última alternativa e somente se for para resolver um 
+   problema muito grave de performance
+ 
+ * Se for o caso garanta que a implementação da desnormalização não comprometa a integridade do
+   Banco de Dados.
+   
+ Se for Oracle, tem muito recurso de Tuning para não desnormalizar.     
+ 
+ O Administrador de dados precisa defender a normalização de dados até o fim, só quando o 
+ desenvolvedor provar que não tem outra alternativa.
+ 
+ 
  
  
  
