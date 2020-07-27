@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D10794D2-6376-FA49-73F4-46826AC56DCA" name="AGENDA_CURSO_ALUNO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AGEN_agenda_curso_id" id="69623264-2286-0EEA-B0A9-E9CB3C314972">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="94408B30-F374-50B5-86BF-42FEF90B5D4F" referredColumn="DA61A2BD-B6A0-FC20-A2DB-82C78A4AA9B5"/>
+</associations>
+</Column>
+<Column name="ALUN_aluno_id" id="F595A572-42BD-B8C2-CD41-BBB5FB9118FF">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="10438B43-D7C9-3DC8-919A-3CC7EED066FD" referredColumn="73D91CC7-F089-1BF1-D06F-E4116735F20B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0EDDC61-47C3-8D24-F7CD-6A8393DB29F9" name="AGENDA_CURSO_ALUNO_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69623264-2286-0EEA-B0A9-E9CB3C314972"/>
+<colUsage columnID="F595A572-42BD-B8C2-CD41-BBB5FB9118FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2654AAAC-F904-534A-2BAA-911E29804C4B" name="AGENDA_CURSO_ALUNO_AGEN_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>88B990F0-A8ED-E47F-BB27-AF8806990FAA</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69623264-2286-0EEA-B0A9-E9CB3C314972"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B71F4146-0076-B401-4FC4-CFCCAC35C3AF" name="AGENDA_CURSO_ALUNO_ALUN_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>88B990F0-A8ED-E47F-BB27-AF8806990FAA</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F595A572-42BD-B8C2-CD41-BBB5FB9118FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

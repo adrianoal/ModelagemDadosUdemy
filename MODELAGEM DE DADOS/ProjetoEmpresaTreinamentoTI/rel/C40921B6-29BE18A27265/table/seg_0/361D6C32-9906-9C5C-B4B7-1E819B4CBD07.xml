@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="361D6C32-9906-9C5C-B4B7-1E819B4CBD07" name="TIPO_FONE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>19BF0C63-39B7-011B-9274-3C540405764C</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<abbreviation>TIPO_FONE</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipo_fone_id" id="D25044CB-0F1A-C6FA-426B-43A56861E1E2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>84F70CC2-D110-DED6-F364-E0758A3EE0F1</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_telefone" id="2491EE9C-7293-44F7-A757-76E0274CEDD3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>B981514D-745E-9D35-65F1-D93798028AE2</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8BD7AD42-F6D6-DF56-E0B8-2CC820E52FF0" name="TIPO_FONE_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>B818A19E-19FC-0EAB-4A8A-FBF1554AE736</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D25044CB-0F1A-C6FA-426B-43A56861E1E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

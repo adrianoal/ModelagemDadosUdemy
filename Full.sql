@@ -1290,8 +1290,22 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------        
-    
+30.Database Design Inicial com Utilitário Engenharia para Modelagem Relacional
+
+ Objetivos:
+ ----------
  
+ * Utilizar o utilitário Engenharia para Modelo Relacional para gerar o database Design INICIAL
+ 
+ * Na toobak selecione o botão >> Engenharia para Modelo Relacional para executar o utilitário 
+   para gerar o Database Design Inicial.
+   
+ * Marque os objetos a serem gerados e clique no botão Engenharia.
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------        
+
  
    
 

@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DAD63D7C-5E28-F39E-9FD2-AF06DDD4EE57" name="INST">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>C818F6E3-DCFC-7A25-6A1D-D7B596DE1894</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<abbreviation>INST</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="instrutor_id" id="E050C715-1F1D-00D5-018A-D6A56E9C606F">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>D196419F-1A90-E1F6-03CD-C0F06388425C</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="1DD704B3-2CF7-F20F-DA64-0125C6BB1F46">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>461C3C5A-AEFD-E333-2949-1240C20CDC8B</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FA6B2C3F-68B4-D4DA-E965-69D2D225A977" name="INST_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>9A709021-80D6-5CDB-D40D-7687EEF26D61</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E050C715-1F1D-00D5-018A-D6A56E9C606F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

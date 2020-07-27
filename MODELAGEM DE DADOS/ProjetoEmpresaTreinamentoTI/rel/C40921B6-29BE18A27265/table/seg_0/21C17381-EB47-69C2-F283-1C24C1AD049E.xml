@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21C17381-EB47-69C2-F283-1C24C1AD049E" name="AGEN">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>9E99D397-60E4-509B-B80E-39480B569F7C</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<abbreviation>AGEN</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="agenda_curso_id" id="DA61A2BD-B6A0-FC20-A2DB-82C78A4AA9B5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>52370F18-7E87-8FDF-46ED-1C96F9F75188</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_inicial" id="17D89FC3-8BC1-7B40-F9C9-A7A95236857E">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>3B6A1BA7-FCA3-0F5E-EF63-671486816303</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPR_empresa_id" id="5723E95B-90B6-DB9A-EBF2-385C77F27856">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>944CBFF2-B288-EB52-858D-666140EB7741</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4AA3ACD-CC3E-1CF5-92D2-CDF9DD7B9E38" referredColumn="15BA98F9-AB29-41CA-3153-B243F7C9F5D2"/>
+</associations>
+</Column>
+<Column name="INST_instrutor_id" id="A454F3D8-B9FE-40DB-7A2E-C9057B13BC77">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>662D9F13-BD7D-EF99-9C8F-A09042200FC4</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DA2AA50-293A-8189-C2B0-AC9DA0F27F26" referredColumn="E050C715-1F1D-00D5-018A-D6A56E9C606F"/>
+</associations>
+</Column>
+<Column name="CRSO_curso_id" id="01A7B492-76D2-A8E8-BF26-4EC894108862">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>BF02345F-3D09-3ACF-8FCC-889174101542</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="94649032-4BE5-22A7-7469-EAF178BA50B9" referredColumn="6B973030-B50A-9FB5-93D4-67E9242D8F04"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88095220-BDD7-37F6-0F92-42ACAB8D1FBA" name="AGEN_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>997B7B05-5E9B-CA7D-119D-B879C679EAA8</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA61A2BD-B6A0-FC20-A2DB-82C78A4AA9B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC541555-19A7-E118-F47E-BCB3990EDE31" name="AGEN_CRSO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>21D4F734-6FFC-B2FB-B1EB-FC1A5647548A</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01A7B492-76D2-A8E8-BF26-4EC894108862"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="689D952C-4C28-D93B-6484-67B8D6B1F0B9" name="AGEN_EMPR_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>88679141-63BA-C2D4-76F5-8D7BF5A6795C</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5723E95B-90B6-DB9A-EBF2-385C77F27856"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93AA3F3D-909D-E50E-59FE-8B8E9D633C16" name="AGEN_INST_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>75A927EF-48E9-C99F-24F3-97CEEF133E53</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A454F3D8-B9FE-40DB-7A2E-C9057B13BC77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="94649032-4BE5-22A7-7469-EAF178BA50B9" containerWithKeyObject="21C17381-EB47-69C2-F283-1C24C1AD049E" localFKIndex="AC541555-19A7-E118-F47E-BCB3990EDE31" name="AGEN_CRSO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<generatorID>21D4F734-6FFC-B2FB-B1EB-FC1A5647548A</generatorID>
+<ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
+<referredTableLongName>CRSO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>091D25BC-0FFF-113C-730A-83CE7C39A071</referredTableID>
+<keyObject>143525E3-8B0E-B826-368A-40C2854E2EEE</keyObject>
+<referredKeyID>143525E3-8B0E-B826-368A-40C2854E2EEE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>curso_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
