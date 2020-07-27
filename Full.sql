@@ -1341,7 +1341,7 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
 --------------------------------------------------------------------------------------------------          
  Seção 7: Modelagem de Dados - Contrução
  
- 33.Geração dos comandos DDL (Data Definition Language)
+33.Geração dos comandos DDL (Data Definition Language)
  
   
   1. Abra d Diagrama do seu projeto, selecione a Tab Relational 
@@ -1353,7 +1353,75 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+34.Download e Instalação do Oracle Database 18c XE
  
+ Essa aula eu pulei, porque já tinha o DB instalado em minha máquina 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+35.Startup e Shutdown da instância e Serviços do Oracle Database 18c XE  
+
+ * Verificar o Status da Instância
+ * Startup da instância e serviços
+ * Shutdown da Instalação e serviços 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+36.Configurando Serviços Listener e Oracle no Windows
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+37.Criando e Testando um Conexão como o Oracle Database 
+ 
+ * Configurar o serviço Listener do Windows como automático
+ 
+ * Configurar o serviço Oracle do Windows como automático 
+ 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+38.Download, instalação e Configuração de Conexões do Oracle  SQL Developer
+
+ Criando Conexão:
+ ----------------
+ Name: SYS_XEPDB1
+ Nome de Usuário: sys
+ Senha: oracle
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+39.Criação do Usuário Owner dos Objetos
+
+ CONSTRUÇÃO - CRIAÇÃO DO USUÁRIO OWNER DOS OBJETOS 
+ 
+ 1. Abra o SQl Developer 
+ 2. Abra uma conexão com o banco de dados Oracle 18c XE utilizando a conexão para o usuário SYS 
+ 3. Execute o comando para criar o usuário TREINAMENTO que será o owner dos objetos do 
+    projeto Treinamento.
+ 4. Execute o comando para passar os provilégios de sistema (system privileges) necessários 
+    para o usuário TREINAMENTO poder criar os objetos.
+
+ -- Criação de Usuário:
+ CREATE USER treinamento 
+ IDENTIFIED BY treinamento
+ DEFAULT TABLESPACE USERS
+ TEMPORARY TABLESPACE TEMP
+ QUOTA UNLIMITED ON USERS; --Sem limites na tablespace Users
+ 
+ -- Concedendo Privilégios:
+ grant connect, resource to treinamento; -- resource --> Permite o usuário crair objetos
+ 
+ -- Apontar para a VM:
+ 192.168.56.102
+ pdbxe
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+40.Execução dos comandos DDL 
+
+ 
+ 
+
  
  
  
