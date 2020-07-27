@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6D082E2-5EB3-286A-090E-E3B777B25DD6" name="FONE">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="488FAB16-8D44-2745-3A72-15F6983D5627" name="TELEFONE">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>26044273-2234-8430-9A9E-4839C0216526</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <abbreviation>FONE</abbreviation>
@@ -9,9 +9,9 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="telefone_id" id="04CA2023-E086-96C9-D435-AB4532B61884">
+<Column name="telefone_id" id="471A1599-DE00-DF92-3CA0-1740E70CD40A">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>C9983BD2-D64F-CEC9-0302-69076D0620C1</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="numero" id="B5A98723-2109-0646-337C-0C32AF28F784">
+<Column name="numero" id="D3CA9DAA-7B85-1E78-0A76-1771B8DAA151">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>BB92512E-02AC-927E-CFD2-8F5CB1C05C82</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -33,9 +33,9 @@
 <ownDataTypeParameters>40,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="INST_instrutor_id" id="CD78E1C3-C12B-69F4-8F7A-FD177D680307">
+<Column name="INSTRUTOR_instrutor_id" id="D45F67BF-6EF4-9AA8-0CFD-04CF9744C204">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>62ABE463-21BC-4FD1-C3E4-7A65D420F787</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -47,12 +47,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="F7F16A78-7F86-6E85-755D-7CE5CC9D2F20" referredColumn="E050C715-1F1D-00D5-018A-D6A56E9C606F"/>
+<colAssociation fkAssociation="E5F421A8-7EE4-5F84-7F70-10AE98958B77" referredColumn="F02B0C3A-800D-91D5-3CD5-F7C4CC821B39"/>
 </associations>
 </Column>
-<Column name="ALUN_aluno_id" id="7B0CE4AE-8714-C36F-7A67-BB4864728C9A">
+<Column name="ALUNO_aluno_id" id="E7B2C7E6-CD50-185F-4104-EBFD7AB8D6BD">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>6BD3C0A1-239E-2728-6470-D179837F3F15</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -64,12 +64,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="65071DB7-C1DD-42A6-FE42-4790B9700F9D" referredColumn="73D91CC7-F089-1BF1-D06F-E4116735F20B"/>
+<colAssociation fkAssociation="5F1618E8-B13B-559E-5C26-36B31926E610" referredColumn="D6D70BEE-1572-FB91-5D46-0F8737650FF9"/>
 </associations>
 </Column>
-<Column name="TIPO_FONE_tipo_fone_id" id="5925693E-2C47-9135-481D-2DA90981124E">
+<Column name="TIPO_TELEFONE_tipo_fone_id" id="46BD9A97-2FBD-F96F-D9DA-52B8B503EAB5">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>B9FA4589-812D-D3D2-F22B-5AF184D86F39</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -80,54 +80,54 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="CA816379-36AD-7EB8-4A35-3BA884FAA789" referredColumn="D25044CB-0F1A-C6FA-426B-43A56861E1E2"/>
+<colAssociation fkAssociation="CEBAB96C-DE05-5308-6835-067F910C5994" referredColumn="114D97C6-52E9-EFD4-6101-2C2C6C369B65"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="2EF30BA7-BF7E-49C7-C86D-C17D37FE4FC4" name="FONE_PK">
+<ind_PK_UK id="AA7D526B-147A-63FC-09C9-2A197A1AC67E" name="TELEFONE_PK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>C5E45859-93A1-F4B9-255D-5FF5652B9418</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="04CA2023-E086-96C9-D435-AB4532B61884"/>
+<colUsage columnID="471A1599-DE00-DF92-3CA0-1740E70CD40A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="88695887-0396-0C89-E9B6-B9E9751EADD8" name="FONE_ALUN_FK">
+<ind_PK_UK id="605209BD-8A24-0F7F-6657-E4C703EBAC3E" name="TELEFONE_ALUNO_FK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>2782786E-61B3-803D-E6F9-78D703865BE6</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="7B0CE4AE-8714-C36F-7A67-BB4864728C9A"/>
+<colUsage columnID="E7B2C7E6-CD50-185F-4104-EBFD7AB8D6BD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="607BF90C-B4BA-1115-C07A-C3053DD20B93" name="FONE_INST_FK">
+<ind_PK_UK id="84E87A0F-CBF3-ABD1-08AC-B5F892C03B10" name="TELEFONE_INSTRUTOR_FK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:18 UTC</createdTime>
 <generatorID>23DE4399-4858-C03A-0B48-173301FC1ECF</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="CD78E1C3-C12B-69F4-8F7A-FD177D680307"/>
+<colUsage columnID="D45F67BF-6EF4-9AA8-0CFD-04CF9744C204"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D9B9E9CB-AEFD-A5DB-88A4-2ECC6169E744" name="FONE_TIPO_FONE_FK">
+<ind_PK_UK id="F2A01318-829A-39C9-8AEE-A70C62849D5E" name="TELEFONE_TIPO_TELEFONE_FK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:18 UTC</createdTime>
 <generatorID>AAF582E6-6707-7B06-1784-B280A57789E9</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5925693E-2C47-9135-481D-2DA90981124E"/>
+<colUsage columnID="46BD9A97-2FBD-F96F-D9DA-52B8B503EAB5"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

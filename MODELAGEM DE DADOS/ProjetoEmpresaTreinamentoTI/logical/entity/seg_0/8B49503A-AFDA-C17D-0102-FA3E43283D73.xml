@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>CRSO</preferredAbbreviation>
 <shortName>CRSO</shortName>
 <synonym>TREINAMENTO</synonym>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">

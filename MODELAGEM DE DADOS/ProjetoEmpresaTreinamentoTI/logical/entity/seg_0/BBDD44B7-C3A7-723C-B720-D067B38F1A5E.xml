@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>ALUN</preferredAbbreviation>
 <shortName>ALUN</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="aluno_id" id="CA098786-13DA-33C3-B205-06E6BDC0718D">

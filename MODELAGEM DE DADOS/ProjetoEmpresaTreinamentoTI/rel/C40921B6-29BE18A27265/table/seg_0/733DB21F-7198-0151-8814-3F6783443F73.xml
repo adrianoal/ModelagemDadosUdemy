@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="091D25BC-0FFF-113C-730A-83CE7C39A071" name="CRSO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="733DB21F-7198-0151-8814-3F6783443F73" name="CURSO">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>8B49503A-AFDA-C17D-0102-FA3E43283D73</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <abbreviation>CRSO</abbreviation>
@@ -9,9 +9,9 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="curso_id" id="6B973030-B50A-9FB5-93D4-67E9242D8F04">
+<Column name="curso_id" id="8DBD4077-6500-24D0-AF07-3F6C29B2478B">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>624BCC2B-9128-4316-D3A6-E6243AC8C538</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="codigo" id="D1255285-5377-E661-381A-31EDB36B0996">
+<Column name="codigo" id="949F517A-0E3F-B15B-C552-FE932C68514F">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>23A3EA40-DE4A-47CC-2409-CDEB4686EFB1</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -33,9 +33,9 @@
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nome" id="BC76841E-2D7E-BADF-443C-422741F263A8">
+<Column name="nome" id="02A7C6F5-9519-9FA1-EF57-378E63BF9709">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>C9858FBD-75AF-6CFF-CB0D-1278835E21E7</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -45,9 +45,9 @@
 <ownDataTypeParameters>40,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="preco" id="0A3DFB44-7AE6-02E1-6E9D-D7707E0BB5B1">
+<Column name="preco" id="943751C9-6D9B-A08F-D173-91A7FCDFB1C6">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>A6577572-E7D6-7C39-0840-83C20561E4DF</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -58,9 +58,9 @@
 <ownDataTypeParameters>,18,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="duracao" id="B989C23F-4EB9-A173-3F0A-ED54CE63568B">
+<Column name="duracao" id="3560BA75-3B7E-88B1-4379-6539767E9C62">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>A3EAD9E9-FDF1-0A45-8D2D-11807134D309</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -73,27 +73,27 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="143525E3-8B0E-B826-368A-40C2854E2EEE" name="CRSO_PK">
+<ind_PK_UK id="EB720FD7-6840-B386-8E4B-FB746E4F2713" name="CURSO_PK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>059D6986-6851-03BA-C7F7-DD7507FE3A51</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6B973030-B50A-9FB5-93D4-67E9242D8F04"/>
+<colUsage columnID="8DBD4077-6500-24D0-AF07-3F6C29B2478B"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="69AE77E8-5A4C-BBB1-AE3B-E72EBC63CA01" name="CRSO_codigo_UN">
+<ind_PK_UK id="B091E072-CEC5-2EB2-0B62-229BE4C27BFD" name="CURSO_codigo_UK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>05F5836A-BFEC-AA36-C1D2-93A428EA7BF6</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <indexState>Unique Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="D1255285-5377-E661-381A-31EDB36B0996"/>
+<colUsage columnID="949F517A-0E3F-B15B-C552-FE932C68514F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>FONE</preferredAbbreviation>
 <shortName>FONE</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="telefone_id" id="C9983BD2-D64F-CEC9-0302-69076D0620C1">
@@ -57,7 +56,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="aluno_id" id="6BD3C0A1-239E-2728-6470-D179837F3F15">
 <createdBy>aalima5</createdBy>
@@ -73,7 +72,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="tipo_fone_id" id="B9FA4589-812D-D3D2-F22B-5AF184D86F39">
 <createdBy>aalima5</createdBy>
@@ -88,7 +87,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

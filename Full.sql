@@ -1305,7 +1305,32 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------        
+31.Database Design Adicional
 
+ * Revisar e refinar Tabelas
+ * Revisar e refinar Colunas
+ * Revisar e refinar constraints de Primary Key 
+ * Revisar e refinar constraints de Unique 
+ * Revisar e refinar contraints de Foreign 
+ * Definir Indicadores não unicos
+ 
+ 
+ Se foi tudo feito corretamente, quando chegar nessa parte não vai ter nada para ajustar.
+ Será apenas um ckecklist.
+ 
+ Pode ser criado um índice para todas as 'colunas' que são Foreign KEY, isso é uma boa prática, 
+ e deve ser criado.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
    
 

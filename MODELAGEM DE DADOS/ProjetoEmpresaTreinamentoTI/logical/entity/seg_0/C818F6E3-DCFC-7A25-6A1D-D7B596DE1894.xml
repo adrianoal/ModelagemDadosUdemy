@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>INST</preferredAbbreviation>
 <shortName>INST</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="instrutor_id" id="D196419F-1A90-E1F6-03CD-C0F06388425C">

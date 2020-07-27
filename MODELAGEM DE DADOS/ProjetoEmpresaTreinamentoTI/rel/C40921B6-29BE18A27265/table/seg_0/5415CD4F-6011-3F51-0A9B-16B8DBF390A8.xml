@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35858AE6-1D9C-CC63-6E59-F9C50D2CD4D8" name="EMPR">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5415CD4F-6011-3F51-0A9B-16B8DBF390A8" name="EMPRESA">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>83C88399-322B-FA04-E016-21A4C0B5EAEC</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <abbreviation>EMPR</abbreviation>
@@ -9,9 +9,9 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="empresa_id" id="15BA98F9-AB29-41CA-3153-B243F7C9F5D2">
+<Column name="empresa_id" id="C0B3DA3A-3FF8-E432-3A3C-2F15AA4889BE">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>E8D9B0AF-AED3-948F-DD85-512BDE7C3A9A</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nome" id="DD87C6D3-9DF6-07CF-7D73-2BE454F4DE05">
+<Column name="nome" id="EAA38D38-3F49-1EDA-C0FF-0DD924C64D3F">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>5A92D6B8-4AC4-C6D8-B382-DBDC899D874C</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -34,16 +34,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="F9AFB6F7-E53D-E285-6B86-A86658C8660E" name="EMPR_PK">
+<ind_PK_UK id="6046337E-8EE2-881F-6E55-80016EB0A773" name="EMPRESA_PK">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-07-27 14:15:19 UTC</createdTime>
+<createdTime>2020-07-27 14:36:17 UTC</createdTime>
 <generatorID>212592E4-7C19-633C-7DEB-A698804F53BB</generatorID>
 <ownerDesignName>ProjetoEmpresaTreinamentoTI</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="15BA98F9-AB29-41CA-3153-B243F7C9F5D2"/>
+<colUsage columnID="C0B3DA3A-3FF8-E432-3A3C-2F15AA4889BE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

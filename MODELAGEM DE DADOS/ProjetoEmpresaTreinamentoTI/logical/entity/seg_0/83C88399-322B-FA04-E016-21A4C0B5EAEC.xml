@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>EMPR</preferredAbbreviation>
 <shortName>EMPR</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="empresa_id" id="E8D9B0AF-AED3-948F-DD85-512BDE7C3A9A">

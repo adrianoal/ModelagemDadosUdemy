@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>TIPO_FONE</preferredAbbreviation>
 <shortName>TIPO_FONE</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="tipo_fone_id" id="84F70CC2-D110-DED6-F364-E0758A3EE0F1">

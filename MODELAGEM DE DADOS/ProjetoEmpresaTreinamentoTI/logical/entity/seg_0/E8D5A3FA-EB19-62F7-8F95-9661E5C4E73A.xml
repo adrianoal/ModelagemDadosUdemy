@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>INST</preferredAbbreviation>
 <shortName>INST</shortName>
 <synonym>HABILITACAO</synonym>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
@@ -44,7 +43,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="curso_id" id="43F2AD22-AA7A-5EB0-0DB7-7A6BDF42A5AD">
 <createdBy>aalima5</createdBy>
@@ -59,7 +58,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="taxa_hora" id="53F6AFF5-1757-B4C4-F88E-714FA1A843D1">
 <createdBy>aalima5</createdBy>
