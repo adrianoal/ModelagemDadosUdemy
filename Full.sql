@@ -1419,6 +1419,18 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
 --------------------------------------------------------------------------------------------------          
 40.Execução dos comandos DDL 
 
+ 1. Abra o Diagrama do seu projeto, selecione a Tab Relational
+ 2. Na toolbar, selecione o Menu Exibir => Editor de Arquivo DDL
+ 3. Selecione a versão do banco de dados
+ 4. Clique no botão Gerar, selecione as opções a serem geradas e clique em OK
+ 5. Salve o arquivo script de comandos DDL gerado.
+ 
+ 1. Abra o SQL Developer
+ 2. Faça uma conexão com o banco de dados Oracle 18c XE utilizando a sua conexão para o usuário   
+    treinamento 
+ 3. Abra o arquivo Script de comandos DDL gerado 
+ 4. Execute os comandos 
+ 
  
  
 
