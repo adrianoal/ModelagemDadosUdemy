@@ -1337,9 +1337,22 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
  O Administrador de dados precisa defender a normalização de dados até o fim, só quando o 
  desenvolvedor provar que não tem outra alternativa.
  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+ Seção 7: Modelagem de Dados - Contrução
  
+ 33.Geração dos comandos DDL (Data Definition Language)
  
+  
+  1. Abra d Diagrama do seu projeto, selecione a Tab Relational 
+  2. Na toobar, selecione o Menu Exibir => Editor de Arquivo DDL
+  3. Selecione a versão do banco de dados 
+  4. Clique no botão Gerar, selecione as opções a serem geradas e clique em OK
+  
+  
  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
  
  
  
