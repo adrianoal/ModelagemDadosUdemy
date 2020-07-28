@@ -1566,7 +1566,39 @@ Seção 10: Oracle 19c SQL Fundamentos - Instalação e Configuração de Conex�
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+Seção 11:Oracle 19c SQL Fundamentos - Visão geral do Oracle Database 19c
 
+47.Visão Geral do Oracle Database 19c
+
+ Característica do Database Oracle:
+ ----------------------------------
+ 
+ * Administração e Gerenciabilidade
+ * Performance 
+ * Alta Disponibilidade
+ * Segurança
+ * Integridade das informações
+ * Integração
+ * Nuvem 
+ 
+ CONCEITO DE BANCO DE DADOS RELACIONAL CONSITEM:
+ -----------------------------------------------
+ 
+ * Coleção de objetos e relações (Tabelas. Indices, View e etc...)
+ * Conjunto de operadores para atuar sobre os objetos e relações (SQL)
+ * Integridade dos dados 
+ 
+ * Um banco de dados relacional é uma coleção relações entre tabelas de duas dimensões.
+ 
+ Dimensões --> (Linhas/Colunas)
+ 
+ Null --> É ausencia de valor, não é espaço, não é 0.
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+ 
+ 
+ 
  
  
  
