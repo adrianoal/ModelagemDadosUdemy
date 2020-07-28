@@ -1479,9 +1479,23 @@ Seção 9:Oracle 19c SQL Fundamentos - Instalação do Oracle 18c XE
  Banco de Dados plugável: localhost:1521/XEPDB1
  URL do EM Express: 	  https://localhost:5500/em
  
- 
-   
 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+43.Startup e Shutdown da Instância serviços do Oracle Database 18c XE
+
+ Objetivos:
+ ----------
+ 
+ * Efetuar Startup e Shutdown da instância e Serviços do Oracle Database 18c XE 
+ * Verficar o Status da Instância 
+ * Startup da Instância e serviços
+ * Shtdown da Instância e Serviços 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+ 
+ 
  
  
  
