@@ -1533,9 +1533,40 @@ Seção 9:Oracle 19c SQL Fundamentos - Instalação do Oracle 18c XE
 	
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
-	
+Seção 10: Oracle 19c SQL Fundamentos - Instalação e Configuração de Conexão do SQL Developer 
+
+46.Download, instalação e configuração de conexão do Oracle SQL Developer 
+
+ Schema HR:
+ ----------
+ 
+ * O Schema HR é fornecido pela Oracle e possui um conjunto de tabelas para realização de 
+ práticas, demosntrações e estudos.
+ 
+ Conexão para o usuário sys
+ 
+ conexao: sys_XEPDB1
+ Nome de usuário: sys
+ Senha:  Adri@no310710
  
  
+ Desbloquear a conta do usuário HR:
+ ----------------------------------
+								alter user hr account unlock;
+ 
+ alter a senha do usuário HR:
+ ----------------------------
+								alter user hr identified by hr
+ 
+ 
+ Conexão HR:
+ -----------
+ Usuário: hr
+ Senha:   hr
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+
  
  
  
