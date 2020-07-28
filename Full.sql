@@ -1508,6 +1508,34 @@ Seção 9:Oracle 19c SQL Fundamentos - Instalação do Oracle 18c XE
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+45.Criando e Testando uma Conexão com o Oracle Dadabase 18c XE 
+
+ Objetivos:
+ ----------
+
+ * Criar e testar uma conexão com o Oracle Database 18c XE 
+ 
+ Passos:
+ -------
+ 
+ * Cria uma conexão local com o Oracle Database XE utilizando TNSNAMES
+ * Testar a conexão
+ * Conectar ao Oracle XE utilizando a ferramenta Oracle SQL*PLUS
+ 
+ Tem dois Usuário DBAs que são criados automáticamente:
+ 
+ sys que é o dono do dicionário de dados
+ system que é um DBS também 
+ 
+ cmd 
+	sqlplus system/senha@xepdb1
+	
+	
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+	
+ 
+ 
  
  
  
