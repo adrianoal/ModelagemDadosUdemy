@@ -1431,14 +1431,37 @@ Seção 6:Modelagem de Dados - Database Design - Projeto do banco de Dados
  3. Abra o arquivo Script de comandos DDL gerado 
  4. Execute os comandos 
  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+Seção 8: Oracle 19c SQL Fundamentos - Apresentação do Curso 
+
+41.Apresentação do Curso 
+
+ Importância de uma base sólida:
+ -------------------------------
  
+ 
+ 
+ Desenvolvedor Oracle 
+	Oracle SQL 
+		Oracle PL/SQL
+			Modelagem de Dados 
+
+  			
+ 
+ DBA Oracle 
+  Oracle SQL 
+		Oracle PL/SQL
+			Modelagem de Dados 
+				Tuning 
+					Administração de base de dados 
  
 
- 
- 
- 
- 
- 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+
+
+
  
  
  
