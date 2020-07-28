@@ -1596,10 +1596,93 @@ Seção 11:Oracle 19c SQL Fundamentos - Visão geral do Oracle Database 19c
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+Seção 12:Oracle 19c SQL Fundamentos - Introdução as SQL
+ 
+48.Introdução ao SQL 
+
+ Objetivos:
+ ----------
+ 
+ * Entender o uso do SQL em projetos de Software
+ 
+ * Definir e entender os conceitos básicos da linguagem SQL 
+ 
+ Ferramentas Oracle para desenvolvimento com SQL:
+ ------------------------------------------------
+ 
+ * Oracle SQL Developer
+ * Oracle SQL*PLUS 
+
+ -- Fornecedores:
+ * PL/SQL Developer 
+ * Toad 
+ 
+ Outras ferramentas da Oracle que precessam comandos SQL:
+ --------------------------------------------------------
+ 
+ * Oracle JDeveloper --> Interface para desenvolvimento de aplicações em Java 
+ * Oracle Apllication Express --> Essa ferramenta já vem junto, para desenvolvimento de aplicações para a internet
+ * Outros
+ Produtos Oracle que Utilizam SQL:
+ ---------------------------------
+ 
+ * Oracle Financials
+ * Oracle Project
+ * Oracle Business Suite ERP
+ * Outros
+ 
+ Documentação da Oracle:
+ -----------------------
+ 
+  http://otn.oracle.com 
  
  
+ Padrão ANSI:
+ ------------
+ 
+ * SQL ANSI é o SQL padrão estabelecido pelo American National Standards Institute.
+			(Instituto que define padrão)...
+ 
+ * Oracle SQL é parecido, mas não identico as SQL ANSI.
+  
+ Data Manipulation Language(DML):
+ --------------------------------
+ 
+ * SELECT
+ * INSERT
+ * UPDATE 
+ * DELETE
+ * MERGE 
  
  
+ Data Definition Language(DDL):
+ ------------------------------
+ 
+ * CREATE
+ * ALTER
+ * DROP
+ * RENAME -- Renomear um Objeto
+ * TRUNCATE
+ * COMMENT -- P/ Adicionar um comentario para uma tabela ou coluna
+ 
+ 
+ Data Control Language(DCL):
+ ---------------------------
+ 
+ * GRANT -- Conceder privilégio
+ * REVOKE -- Revogar Privilégios 
+ 
+ 
+ Transaction Control(TCL):
+ 
+ * COMMIT -- Efetivo na transação 
+ * ROLLBACK -- Desfaz a transação 
+ * SAVEPOINT -- Criar um ponto de controle na transação
+ 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+
  
  
  
