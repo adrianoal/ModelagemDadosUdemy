@@ -1596,7 +1596,7 @@ Seção 11:Oracle 19c SQL Fundamentos - Visão geral do Oracle Database 19c
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
-Seção 12:Oracle 19c SQL Fundamentos - Introdução as SQL
+Seção 12:Oracle 19c SQL Fundamentos - Introdução ao SQL
  
 48.Introdução ao SQL 
 
