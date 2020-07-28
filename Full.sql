@@ -1494,6 +1494,20 @@ Seção 9:Oracle 19c SQL Fundamentos - Instalação do Oracle 18c XE
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+44.Configurando Serviços Listener e Oracle no Windows 
+
+ Objetivos:
+ ----------
+  
+ * Configurar o serviço Listener no Windows
+ * Configurar o serviço Oracle no Windows 
+ 
+ Vamos colocar o serviço do listener como automático, e o serviço do Oracle como automático.
+ 
+ Dessa forma esses serviços entraram no ar ao ligar o computador.
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
  
  
  
