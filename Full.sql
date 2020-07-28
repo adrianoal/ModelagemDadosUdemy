@@ -1459,10 +1459,25 @@ Seção 8: Oracle 19c SQL Fundamentos - Apresentação do Curso
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+Seção 9:Oracle 19c SQL Fundamentos - Instalação do Oracle 18c XE 
 
+42.Download e instalação do Oracle Database 18c XE 
 
-
+ limite do Oracle Database 18c XE:
+ ---------------------------------
  
+ * Até 12 GB de uso para dados
+ * Até 2 GB de uso de memória para a Instância Oracle 
+ 
+
+ Instalação do Oracle 18c XE
+ 
+ Usuarios: sys/system/pdbadmin
+ Senha: Adri@no310710
+
+ Banco de Dados contêiner multitenant: 1521
+ Banco de Dados plugável: localhost:1521/XEPDB1
+ URL do EM Express: 	  https://localhost:5500/em
  
  
    
