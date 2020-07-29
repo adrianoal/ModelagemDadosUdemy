@@ -1788,6 +1788,14 @@ FROM   employees;
 SELECT department_name || q'[ Department's Manager Id: ]'|| manager_id "Departamento e Gerente"
 FROM departments;
 
+--Another Example:
+
+SELECT 'ADRIANO' || 
+      Q'['ASSI'S']'|| --> Operador alternativo para aspas(Q --> quotation marks, aspas em English)
+       'LIMA'
+FROM DUAL;
+
+
 -- Linhas duplicadas
 
 SELECT department_id
@@ -1807,47 +1815,210 @@ FROM employees;
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+Seção 14:Oracle 19c Fundamentos - Restringindo e Ordenando Dados 
 
+50.Restringindo e Ordenando Dados
  
  
+ Objetivos:
+ ----------
  
+ * Restringir as linhas recuperadas por uma consultar
+ * Classificar as linhas recuperadas por uma consulta 
+ * Utilizar Váriáveis de Substituição(&)
  
+ Regras de Precedência:
+ ----------------------
  
- 
- 
- 
- 
- 
- 
-  
-
-  
-				
-				
-				
-				
-				
-				
-				
-				
-				
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-  
+ 1. Operadores aritméticos 
+ 2. Operadores de concatenação
+ 3. Condições de comparação 
+ 4. IS [NOT] NULL, LIKE, [NOT] IN
+ 5. [NOT] BETWEEN 
+ 6. NOT EQUAL TO
+ 7. NOT condição lógica 
+ 8. AND condição lógica
+ 9. OR condição lógica 
 
 
+--
+-- Seção 7 
+-- Restringindo e Ordenando Dados
+--
+-- Aula 1
+-- 
 
+-- Utilizando a cláusula WHERE
+
+SELECT employee_id, last_name, job_id, department_id
+FROM employees
+WHERE department_id = 60;
+
+SELECT employee_id, last_name, job_id, department_id
+FROM   employees
+WHERE  job_id = 'IT_PROG';
+
+-- Utilizando Strings de caractere na cláusula WHERE
+
+SELECT first_name, last_name, job_id, department_id, hire_date
+FROM employees
+WHERE last_name = 'King';
+
+-- Utilizando Strings de caractere com datas na cláusula WHERE
+
+SELECT first_name, last_name, job_id, department_id, hire_date
+FROM employees
+WHERE hire_date = '30/01/04';
+
+-- Utilizando operadores de comparação na cláusula WHERE
+
+SELECT last_name, salary
+FROM employees
+WHERE salary >= 10000;
+
+-- Selecionando faixas de valores utilizando o operador BETWEEN
+
+SELECT last_name, salary
+FROM employees
+WHERE salary BETWEEN 10000 AND 15000;
+
+-- Selecionando valores dentro de uma lista utilizando o operador IN
+
+SELECT employee_id, last_name, salary, manager_id, job_id
+FROM employees
+WHERE job_id IN ('IT_PROG', 'FI_ACCOUNT', 'SA_REP') ;
+
+-- Utilizando o operador LIKE
+
+SELECT first_name, last_name, job_id
+FROM employees
+WHERE first_name LIKE 'Sa%';
+
+-- Combinando o uso de vários caracteres curinga
+
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE '_a%';
+
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE '%a';
+
+-- Comparações com valor NULL
+
+SELECT last_name, manager_id
+FROM employees
+WHERE manager_id = NULL ; -- Qulaquer comparacao com NULL retorna NULL.
+
+-- Utilizando a expressão de comparação IS NULL
+
+SELECT last_name, manager_id
+FROM employees
+WHERE manager_id IS NULL;
+
+-- Utilizando o operador AND
+
+SELECT employee_id, last_name, job_id, salary
+FROM    employees
+WHERE salary >= 5000
+AND   job_id =  'IT_PROG' ;
+
+-- Utilizando o operador OR
+
+SELECT employee_id, last_name, job_id, salary
+FROM    employees
+WHERE salary >= 5000
+OR   job_id =  'IT_PROG';
+
+-- Utilizando o operador NOT
+
+SELECT employee_id, last_name, salary, manager_id, job_id
+FROM employees
+WHERE job_id NOT IN ('IT_PROG', 'FI_ACCOUNT', 'SA_REP');
+
+-- Regras de Precedência
+
+SELECT last_name, job_id, salary
+FROM employees
+WHERE job_id = 'SA_REP'  OR job_id = 'IT_PROG' AND salary > 10000;
+
+-- Utilizando parênteses para sobrepor as regras de precedência
+
+SELECT last_name, job_id, salary
+FROM employees
+WHERE (job_id = 'SA_REP'  OR job_id = 'IT_PROG')
+AND salary > 10000;
+
+-- Utilizando a cláusula ORDER BY - Ordem Ascendente
+
+SELECT last_name, job_id, department_id, hire_date
+FROM employees
+ORDER BY hire_date ASC;
+
+SELECT last_name, job_id, department_id, hire_date
+FROM employees
+ORDER BY hire_date;
+
+-- Utilizando a cláusula ORDER BY – Ordem Descendente
+
+SELECT last_name, job_id, department_id, hire_date
+FROM employees
+ORDER BY hire_date DESC;
+
+-- Utilizando a cláusula ORDER BY – Referenciando ALIAS
+
+SELECT employee_id, last_name, salary*12 as salario_anual
+FROM employees
+ORDER BY salario_anual;
+
+-- Utilizando a cláusula ORDER BY – Referenciando a Posição
+
+SELECT last_name, job_id, department_id, hire_date
+FROM employees
+ORDER BY 4;
+
+-- Utilizando a cláusula ORDER BY – Múltiplas colunas ou expressões
+
+SELECT last_name, department_id, salary
+FROM employees
+ORDER BY department_id, salary DESC; -- ASC department_id / DESC salary (ASC --> Default)
+
+-- Utilizando Variáveis de Substituição - &
+
+SELECT employee_id, last_name, salary, department_id
+FROM employees
+WHERE employee_id = &employee_id;
+
+-- Utilizando Variáveis de Substituição - &&
+
+SELECT employee_id, last_name, salary, department_id
+FROM employees
+WHERE employee_id = &&employee_id;
+
+-- Variáveis de substituição com valores tipo Character e Date
+
+SELECT last_name, department_id, job_id, salary*12
+FROM employees
+WHERE job_id = '&job_id' ;
+
+-- Utilizando o comando DEFINE
+
+ -- Utilize o comando DEFINE para criar e atribuir um valor para uma variável.
+ -- Utilize o comando UNDEFINE para remover a variável.
+
+DEFINE employee_id = 101 -- Definindo o valor da variável na sessão
+DEFINE employee_id -- Exibe o valor atribuído
+
+SELECT employee_id, last_name, salary, department_id
+FROM employees
+WHERE employee_id = &employee_id ; -- Vai usar o valor da variavel q defini acima
+
+DEFINE employee_id
+
+UNDEFINE employee_id
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
 
 
 
