@@ -2019,10 +2019,142 @@ UNDEFINE employee_id
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+Seção 15:Oracle 19c SQL Fundamentos - Utilizando Funções Single Row
 
+51.Utilizando Funções Single Row 
 
+ Objetivos:
+ ----------
 
+ * Conhecer os vários tipos de funções disponíveis no SQL
+ 
+ * Utilizar funções single row para trabalhar com strings de caracteres, números e datas
+ 
+ No SQL tem dois tipos de FUNÇÃO:
+							Single-Row   <-- Retorna somente um valor para cada linha
+							Multiple-Row <-- Retorna para cada grupo de linhas 
+ 
 
+ Tipos de funções SQL:
+ ---------------------
+ 
+ Single-row Functions
+ 
+ CHARACTER --> lower, upper, initcap, concat, substr, length, instr, lpad, rpad, trim, replace 
+ NUMBER --> 
+ DATE
+ CONVERSION
+ GENERAL
+ 
+ 
+ 
+ 
+--
+-- Seção 8 
+-- Utilizando Funções Single Row
+--
+-- Aula 1
+--
+
+-- Funções de conversão Maiúsculo & Minúsculo
+
+SELECT employee_id, last_name, department_id
+FROM employees
+WHERE last_name = 'KING';
+
+SELECT employee_id, last_name, department_id
+FROM employees
+WHERE UPPER(last_name) = 'KING';
+
+-- Funções de Manipulação de Caracteres
+
+SELECT CONCAT(' Curso: ','Introdução ORACLE 19c'), 
+       SUBSTR('Introdução ORACLE 19c',1,11),
+       LENGTH('Introdução ORACLE 19c'), 
+       INSTR('Introdução ORACLE 19c','ORACLE') -- Verifica dentro dessa intring o q foi informado no segundo argumento(Oracle), e informa a posição.
+FROM dual;
+
+SELECT first_name "Nome", 
+       LPAD(first_name, 20, ' ') "Nome alinhado a direita", 
+       RPAD(first_name, 20, ' ') "Nome alinhado a esquerda"
+FROM   employees;
+
+SELECT job_title, REPLACE(job_title, 'President', 'Presidente') CARGO
+FROM jobs
+WHERE  job_title = 'President';
+
+-- Funções tipo NUMBER
+
+SELECT ROUND(45.923,2), -- 2 díg de precição 
+       ROUND(45.923,0) -- 0 Díg de precição
+FROM dual;
+
+SELECT TRUNC(45.923,2), 
+       TRUNC(45.923,0)
+FROM dual;
+
+SELECT MOD(1300,600) RESTO -- Dividendo / divisor
+FROM dual;
+
+SELECT ABS(-9), -- Retorna o valor absoluto do numero
+       SQRT(9) -- Retorna a Raiz quadrada de numero
+FROM dual;
+
+-- Funções tipo DATE 
+
+ -- Obs: O DBA que define o formato de datas do banco de dados através do parametro: NLS_DATE_FORMAT
+
+SELECT sysdate
+FROM dual;
+
+DESC dual
+
+SELECT *
+FROM dual;
+
+SELECT 30000 * 1.25
+FROM dual;
+
+-- Cálculos com Datas
+
+SELECT sysdate, 
+       sysdate + 30, 
+       sysdate + 60, 
+       sysdate - 30
+FROM dual;
+
+SELECT last_name, 
+       ROUND((SYSDATE - hire_date)/7,2) "SEMANAS DE TRABALHO'"
+FROM employees;
+
+-- Outras Funções tipo DATE
+
+SELECT first_name, 
+       last_name, 
+       ROUND(MONTHS_BETWEEN(sysdate, hire_date),2) "MESES DE TRABALHO"
+FROM employees;
+
+SELECT SYSDATE, 
+       ADD_MONTHS(SYSDATE, 3), 
+       NEXT_DAY(SYSDATE,'SEXTA FEIRA'), -- Proximo dia referente a uma data da semana
+       NEXT_DAY(SYSDATE,'QUINTA FEIRA')AS QUINTA,
+       LAST_DAY(SYSDATE)
+FROM   dual;
+
+SELECT sysdate, 
+       ROUND(SYSDATE, 'MONTH'), -- Se for > ou = a metade do mês, mostrará o próximo mês
+       ROUND(SYSDATE, 'YEAR'),  -- Se for > ou = a metade do ano, mostrará o próximo ano
+       TRUNC(SYSDATE, 'MONTH'), 
+       TRUNC(SYSDATE, 'YEAR')
+FROM   dual;
+       
+-- O TRUNC para data, retorna nas seguintes condições: 0hr, 0 min, 0 Segundos       
+SELECT SYSDATE, 
+       TO_CHAR(TRUNC(SYSDATE),'DD/MM/YYYY HH24:MI:SS')
+FROM  dual;
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
 
 
 
