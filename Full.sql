@@ -2159,6 +2159,11 @@ Seção 16: Oracle 19c SQL Fundamentos - Funções de Conversão e Expressões C
 
 52.Utilizando Funções de Conversão e Expressões Condicionais 
 
+ 
+
+
+
+
 --
 -- Seção 9 
 -- Utilizando Funções de Conversão e Expressões Condicionais 
@@ -2168,24 +2173,55 @@ Seção 16: Oracle 19c SQL Fundamentos - Funções de Conversão e Expressões C
 
 -- Utilizando a Função TO_CHAR com Datas
 
-SELECT last_name,TO_CHAR(hire_date, 'DD/MM/YYYY  HH24:MI:SS') DT_ADMISSÂO
+
+ -- Obs: Em caso de dúvidas, pesquisar:
+ -- Elementos de modelo de formatação de data:
+
+--SELECT LAST_NAME, HIRE_DATE FROM EMPLOYEES;
+SELECT last_name,
+       TO_CHAR(hire_date, 'DD/MM/YYYY  HH24:MI:SS') DT_ADMISSÂO
 FROM employees;
 
-SELECT sysdate,TO_CHAR(sysdate, 'DD/MM/YYYY  HH24:MI:SS') DATA
+--SELECT SYSDATE FROM DUAL;
+SELECT sysdate,
+       TO_CHAR(sysdate, 'DD/MM/YYYY  HH24:MI:SS') DATA
 FROM   dual;
 
-SELECT last_name, TO_CHAR(hire_date, 'DD, "de" Month "de" YYYY') DT_ADMISSÂO
+SELECT last_name, 
+       TO_CHAR(hire_date, 'DD, "de" Month "de" YYYY') DT_ADMISSÂO
 FROM employees;
 
-SELECT last_name, TO_CHAR(hire_date, 'FMDD, "de" Month "de" YYYY') DT_ADMISSÂO
+SELECT last_name, 
+       TO_CHAR(hire_date, 'FMDD, "de" Month "de" YYYY') DT_ADMISSÂO -- FM --> Remove espcaços em branco ou 0 a esquerda
 FROM employees;
+
+
+SELECT TO_CHAR(SYSDATE,'DAY') DATE1,
+       TO_CHAR(DATE'2020-07-30','DAY') DATA2 
+FROM DUAL;
+
+select to_char(date'2018-01-01', 'Day') initcap,  
+       to_char(date'2018-01-01', 'day') lower,  
+       to_char(date'2018-01-01', 'DAY') upper  
+from   dual
+
 
 -- Utilizando a Função TO_CHAR com Números
 
-SELECT first_name, last_name, TO_CHAR(salary, 'L99G999G999D99') SALARIO
+-- 9 para definir a qtde de dígitos que quer exibir Ex:
+-- 9999 4 digitos
+-- L --> Para moeda local
+-- D --> Símbolo de decimal
+-- G -->  Símbolo de milhar
+ 
+SELECT first_name, 
+       last_name, 
+       TO_CHAR(salary, 'L99G999G999D99') SALARIO
 FROM employees;
 
-SELECT first_name, last_name, TO_CHAR(salary, 'L99G999G999D99') SALARIO
+SELECT first_name, 
+       last_name, 
+       TO_CHAR(salary, 'L99G999G999D99') SALARIO
 FROM employees;
 
 -- Utilizando a Função TO_NUMBER
@@ -2204,28 +2240,79 @@ WHERE  hire_date = TO_DATE('17/06/2003','DD/MM/YYYY');
 
 -- Utilizando Funções Aninhadas
 
-SELECT first_name, last_name, ROUND(MONTHS_BETWEEN(SYSDATE, hire_date),0) NUMERO_MESES
+-- Round arredonda o resultado com 0 digito de precisao
+SELECT first_name, 
+       last_name, 
+       ROUND(MONTHS_BETWEEN(SYSDATE, hire_date),0) NUMERO_MESES
 FROM   employees
 WHERE  hire_date = TO_DATE('17/06/2003','DD/MM/YYYY');
+------------------------------------------------------------------------------------------------
 
+
+ -- Funções Genéricas:
+ ---------------------
+ 
+ /*
+ As funções a seguir trabalham com qualquer tipo de dados:
+ ---------------------------------------------------------
+ NVL(expr1,expr2)
+ NVL2(expr1,expr2,expr3)
+ NULLIF(expr1,expr2)
+ COALESCE(expr1,expr2,...exprn)
+   
+ */
+-- Qualquer expressão com null o resultado é null, por isso deve-se usar NVL
 -- Utilizando a Função NVL
-
-SELECT last_name, salary, NVL(commission_pct, 0), salary*12 SALARIO_ANUAL, 
+SELECT last_name, 
+       salary, 
+       NVL(commission_pct, 0), -- Se o argumento --> 'commission_pct' for nulo ele aplica o segundo argumento --> 0
+       salary*12 SALARIO_ANUAL, 
        (salary*12) + (salary*12*NVL(commission_pct, 0)) REMUNERACAO_ANUAL
 FROM employees;
 
 -- Utilizando a Função COALESCE
-
+ /*
+ * A Função COALESCE pode receber multiplos argumentos:
+ * Se a primeira expressão retorna NULL a função COALESCE retorna esta expressão, se não, 
+ a função coalesce seguirá avaliando as expressões seguintes
+ */
+ 
+ 
 SELECT COALESCE(NULL, NULL, 'Expresssão 3'), COALESCE(NULL, 'Expressão 2', 'Expresssão 3'),
        COALESCE('Expressão 1', 'Expressão 2', 'Expresssão 3')
 FROM dual;
+
+SELECT COALESCE(NULL, NULL, 'Expresssão 3'), -- 1º e null, 2º e null, opa o terceiro foi exibido! Expresssão 3
+       COALESCE(NULL, 'Expressão 2', 'Expresssão 3'), -- 2º argumento nao foi nulo, exibo
+       COALESCE('Expressão 1', 'Expressão 2', 'Expresssão 3'), -- 1º argumento nao foi nulo, exibiu
+       COALESCE(NULL,NULL,NULL,NULL,'ADRIANO') QUINTO_ARGUMENTO
+FROM dual;
+
 
 SELECT last_name, employee_id, commission_pct, manager_id, 
        COALESCE(TO_CHAR(commission_pct),TO_CHAR(manager_id),
        'Sem percentual de comissão e sem gerente')
 FROM employees;
 
+SELECT last_name, 
+       employee_id, 
+       commission_pct, 
+       manager_id, 
+       COALESCE(TO_CHAR(commission_pct),TO_CHAR(manager_id),'Sem percentual de comissão e sem gerente')AS FUNCAO_COALESCE
+FROM employees;
+
+
 -- Utilizando a Função NVL2
+
+-- Se o 1º argumento 'commission_pct' for nulo, ele usa o 3º arg. 0... 
+-- Se commission_pct for <> de null, ele usa o 2º Arg 10
+
+SELECT last_name, 
+       salary, 
+       commission_pct, 
+       NVL2(commission_pct, 10, 0) PERCENTUAL_ATERADO 
+FROM employees;
+
 
 SELECT last_name, salary, commission_pct, 
        NVL2(commission_pct, 10, 0) PERCENTUAL_ATERADO
@@ -2233,28 +2320,57 @@ FROM employees;
 
 -- Utilizando a Função NULLIF
 
+-- Essa função não é muito utilizada
+-- Essa função recebe dois argumentos
+
+SELECT NULLIF(1000,1000)AS ARG_IGUAIS, -- Se os 2 arg. forem iguais, retorna null
+       NULLIF(1000,2000) AS ARG_DIFERENTES-- Se os 2 arg. forem diferentes, retorna o 1º 
+FROM dual;
+
 SELECT NULLIF(1000,1000), NULLIF(1000,2000)
 FROM dual;
 
-SELECT first_name, last_name, LENGTH(first_name) "Expressão 1",
-       LENGTH(last_name) "Expressão 2", NULLIF(LENGTH(first_name), LENGTH(last_name)) RESULTADO
+SELECT first_name, 
+       last_name, 
+       LENGTH(first_name) "Expressão 1",
+       LENGTH(last_name) "Expressão 2", 
+       NULLIF(LENGTH(first_name), LENGTH(last_name)) AS RESULTADO
 FROM employees;
+
 
 -- Expressão CASE
 
-SELECT last_name, job_id, salary,
-                          CASE job_id
-                             WHEN 'IT_PROG'   
-                               THEN 1.10*salary
-                             WHEN 'ST_CLERK' 
-                               THEN 1.15*salary
-                             WHEN 'SA_REP' 
-                               THEN 1.20*salary
-                             ELSE salary 
-                           END "NOVO SALARIO"
+SELECT last_name, 
+       job_id, 
+       salary,
+    CASE job_id
+        WHEN 'IT_PROG'   
+          THEN 1.10*salary
+        WHEN 'ST_CLERK' 
+          THEN 1.15*salary
+        WHEN 'SA_REP' 
+          THEN 1.20*salary
+        ELSE salary 
+    END "NOVO SALARIO"
 FROM employees;
 
 -- Utilizando a Função DECODE
+
+-- FUNÇÃO DECODE:
+
+DECODE(coluna ou expressao,arg1, resulta1
+                           arg2, resulta2
+                           arg3, resulta3)
+                           
+SELECT last_name, 
+       job_id, 
+       salary,
+DECODE(job_id, 'IT_PROG' , 1.10*salary,
+               'ST_CLERK', 1.15*salary,
+               'SA_REP'  , 1.20*salary
+                         , salary) "NOVO SALARIO"
+FROM employees;
+
 
 SELECT last_name, job_id, salary,
 DECODE(job_id, 'IT_PROG' , 1.10*salary,
