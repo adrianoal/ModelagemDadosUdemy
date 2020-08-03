@@ -2480,11 +2480,119 @@ FROM   employees;
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+54.Criando e selecionando Grupos 
 
+ Regras:
+ -------
+ WHERE
+ GROUP BY
+ HAVING 
+ ORDER BY
  
  
+ 
+--
+--
+-- Seção 10 
+-- Agregando dados utilizando Funções de Grupo
+--
+-- Aula 2
+-- 
+
+-- Criado Grupos utilizando a Cláusula GROUP BY
+
+SELECT department_id, 
+       AVG(salary)AS MEDIA_SALARIO
+FROM   employees
+GROUP BY department_id 
+ORDER BY department_id;
 
 
+SELECT department_id, 
+       ROUND(AVG(salary),0)AS MEDIA_SALARIO
+FROM   employees
+GROUP BY department_id 
+ORDER BY department_id;
+
+
+-- Utilizando a clásula Group by com mais de uma Coluna ou Expressão
+
+SELECT department_id, 
+       job_id, 
+       SUM(salary)
+FROM employees
+GROUP BY department_id, job_id
+ORDER BY department_id, job_id;
+
+SELECT department_id, 
+       job_id, 
+       SUM(salary)
+FROM employees
+GROUP BY department_id, job_id
+ORDER BY department_id, job_id;
+
+-- Consultas incorretas utilizando Funções de Grupo
+
+SELECT department_id, 
+       AVG(salary)
+FROM   employees;
+
+-- Corrigindo consultas incorretas utilizando Funções de Grupo
+
+SELECT department_id,  
+       ROUND(AVG(salary),2)AS MEDIA_SALARIO
+FROM employees
+GROUP BY department_id;
+
+-- Consultas incorretas utilizando Funções de Grupo
+
+SELECT department_id, 
+       MAX(salary)
+FROM   employees
+WHERE  MAX(salary) > 10000
+GROUP BY department_id;
+
+-- Corrigindo consultas incorretas utilizando Funções de Grupo
+
+-- Restringindo Grupos utilizando a cláusula HAVING
+
+SELECT department_id, 
+       MAX(salary)
+FROM   employees
+GROUP BY department_id
+HAVING MAX(salary)>10000
+ORDER BY department_id;
+
+SELECT job_id, 
+       SUM(salary) TOTAL
+FROM   employees
+WHERE  job_id <> 'SA_REP'
+GROUP BY job_id
+HAVING   SUM(salary) > 10000
+ORDER BY SUM(salary);
+
+-- Aninhando Funções de Grupo
+-- Se resolve de dentro para fora
+
+SELECT MAX(AVG(salary))
+FROM employees
+GROUP BY department_id;
+
+SELECT ROUND(MAX(AVG(salary)),2)
+FROM employees
+GROUP BY department_id;
+
+
+SELECT AVG(salary)
+FROM   employees
+GROUP BY department_id;
+
+SELECT ROUND(AVG(salary),2)
+FROM   employees
+GROUP BY department_id; 
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
 
 
 
