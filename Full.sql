@@ -2853,7 +2853,46 @@ FROM employees e
   JOIN departments d USING (department_id);
  
  
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+58.OUTER joins 
 
+ * Outer Join --> Retorna registros que não correspondem a condição de JOIN utilizando OUTER join.
+ * Um Join entre duas tabelas que retorna as linhas que resultam do INNER join e também as 
+   linhas que não coincidem a partir da tabela LEFT. É chamado de LEFT OUTER join.
+   
+   
+--
+-- Seção 11 
+-- Exibindo dados a partir de Múltiplas Tabelas
+--
+-- Aula 4 - OUTER JOINS
+
+-- LEFT OUTER JOIN
+
+SELECT e.first_name, e.last_name, d.department_id, d.department_name
+FROM employees e LEFT OUTER JOIN departments d -- O q nao correspode com a tab. da direita..
+     ON (e.department_id = d.department_id) 
+ORDER BY d.department_id;
+
+-- RIGHT OUTER JOIN
+
+SELECT d.department_id, d.department_name, e.first_name, e.last_name
+FROM employees e RIGHT OUTER JOIN departments d
+     ON (e.department_id = d.department_id) 
+ORDER BY d.department_id;
+
+-- FULL OUTER JOIN
+-- Quando nao tiver correspondente na esquerda e na direita ele tras: 
+
+SELECT d.department_id, d.department_name, e.first_name, e.last_name
+FROM   employees e FULL OUTER JOIN departments d
+     ON (e.department_id = d.department_id) 
+ORDER BY d.department_id;
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
 
   
    
