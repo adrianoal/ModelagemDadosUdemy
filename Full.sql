@@ -2380,8 +2380,109 @@ DECODE(job_id, 'IT_PROG' , 1.10*salary,
 FROM employees;
 
 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+Seção 17:Oracle 19c SQL Fundamentos - Agregando Dados Utilizando Funções de Grupo
+
+53.Agregando Dados Utilizando Funções de Grupo
+
+ Objetivos:
+ ----------
+ 
+ * Conhecer as principais funções de grupo disponíveis
+ 
+ * Utilizar Funções de grupo 
+ 
+ * Agrupar dados utilizando a cláusula GROUP BY
+ 
+ * Incluir ou excluir grupos utilizando a cláusula HAVING
+ 
+ PRINCIPAIS FUNÇÕES DE GRUPO:
+ ----------------------------
+ 
+ AVG
+ COUNT
+ MAX
+ MIN
+ SUM
+ STDDEV
+ VARIANCE 
+ 
+--
+-- Seção 10 
+-- Agregando dados utilizando Funções de Grupo
+--
+-- Aula 1
+--
+
+-- Utilizando as Funções AVG e SUM
+
+SELECT AVG(salary)AS MEDIA_SALARIO, 
+       SUM(salary)AS SOMA_SALARIO
+FROM   employees;
+
+-- Utilizando as Funções MIN e MAX
+
+SELECT MIN(hire_date)AS MENOR_DATA_CONTR, 
+       MAX(hire_date)AS MAIOR_DATA_CONTR
+FROM   employees;
 
 
+SELECT MIN(TO_CHAR(hire_date,'DD/MM/YYYY')) AS MENOR_DATA_CONTR,
+       MAX(TO_CHAR(hire_date,'DD/MM/YYYY'))AS MAIOR_DATA_CONTR
+FROM   employees;
+
+
+SELECT MIN(TO_CHAR(hire_date,'DD/MM/YYYY HH24:MI:SS')) AS MENOR_DATA_CONT,
+       MAX(TO_CHAR(hire_date,'DD/MM/YYYY HH24:MI:SS'))AS MAIOR_DATA_CONT
+FROM   employees;
+
+
+--SELECT TO_CHAR(hire_date,'DD/MM/YYYY') AS DATA FROM   employees;
+
+SELECT MIN(salary), 
+       MAX(salary)
+FROM   employees;
+
+-- Utilizando a Função COUNT
+
+SELECT COUNT(*)
+FROM   employees;
+
+SELECT COUNT(commission_pct)
+FROM   employees;
+
+SELECT COUNT(commission_pct), 
+       COUNT(*)
+FROM employees;
+
+SELECT COUNT(NVL(commission_pct,0))
+FROM employees;
+
+-- Utilizando a Função COUNT com DISTINCT
+
+SELECT COUNT(DISTINCT department_id)
+FROM   employees;
+
+SELECT COUNT(department_id)
+FROM   employees;
+
+-- Funções de Grupo e valores NULOS
+
+SELECT AVG(commission_pct)
+FROM   employees;
+
+-- Tratamento de NULOS em Funções de Grupo 
+
+SELECT AVG(NVL(commission_pct, 0))
+FROM   employees;
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
+
+ 
+ 
 
 
 
