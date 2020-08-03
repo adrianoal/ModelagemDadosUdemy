@@ -2593,11 +2593,117 @@ GROUP BY department_id;
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+Seção 18:Oracle 19c SQL Fundamentos - Exibindo dados a partir de Múltiplas Tabelas 
 
+55.Exibindo dados a partir de Múltiplas Tabelas
 
+ * Executar um Join de uma tabela com ela mesma utilizando um Self Join 
+ * Produto Cartesiano  --> Cross Join 
+ * Gerar um produto cartesiano utilizando um Cross Join 
+ 
+ TIPOS DE JOINS COMPATÍVEIS COM SQL ANSI 1999:
+ ---------------------------------------------
+ 
+ Colunas Ambíguas --> São tabelas diferentes com o mesmo no de campo, 
+				   -- para resolver isso se usa um Alias.
+				   
+ 				   
+--
+-- Seção 11 
+-- Exibindo dados a partir de Múltiplas Tabelas
+--
+-- Aula 1 - Exibindo dados a partir de Múltiplas Tabelas
+--
 
+-- Utilizando Prefixos Coluna com Nomes de Tabela 
 
+SELECT employees.employee_id, 
+       employees.last_name, 
+       employees.department_id, 
+       departments.department_name
+FROM   employees JOIN departments 
+ON (employees.department_id = departments.department_id);
 
+-- Utilizando Alias de Tabela
+
+SELECT e.employee_id, 
+       e.last_name, 
+       e.department_id, 
+       d.department_name
+FROM   employees e 
+JOIN departments d
+ON     (e.department_id = d.department_id); -- Nao e obrigado colocar entre parenteses
+
+-- Utilizando Natural Joins
+-- Natural Join faz a referencia entre as tabelas que possuiem campos do mesmo tipo... Neste casa não precia usar a clausula ON 
+
+SELECT  department_id, 
+        department_name, 
+        location_id, 
+        city
+FROM    departments
+NATURAL JOIN locations;
+
+-- JOIN com a Cláusula USING
+
+SELECT e.employee_id, 
+       e.last_name, 
+       d.location_id, 
+       department_id, -- Quando se usa a clausula USIN, o campo em questao no pode usar o Alias...
+       d.department_name
+FROM employees e
+  JOIN departments d USING (department_id);
+
+-- Join com a Cláusula ON
+
+SELECT e.employee_id, e.last_name, e.department_id, d.location_id
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id);
+
+-- Joins utilizando várias tabelas com a Cláusula ON
+
+SELECT e.employee_id, 
+       j.job_title, 
+       d.department_name, 
+       l.city, 
+       l.state_province, 
+       l.country_id
+FROM employees e
+  JOIN jobs        j ON (e.job_id = j.job_id)
+  JOIN departments d ON (e.department_id = d.department_id)
+  JOIN locations   l ON (d.location_id = l.location_id)
+ORDER BY e.employee_id;
+  
+-- Incluindo condições adicionais a condição de Join na cláusula WHERE
+
+SELECT e.employee_id, 
+       e.last_name, 
+       e.salary, 
+       e.department_id, 
+       d.department_name
+FROM employees e JOIN departments d
+ON  (e.department_id = d.department_id) -- Condicao de ligacao
+WHERE (e.salary BETWEEN 10000 AND 15000); -- Condicao adicional 
+
+-- Incluindo condições adicionais a condição de Join utilizando AND
+
+SELECT e.employee_id, e.last_name, e.salary, e.department_id, d.department_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id) AND (e.salary BETWEEN 10000 AND 15000); -- Condicao adicional na propria clausua ON... Essa forma nao e uma boa pratica
+   
+-- Self Join Utilizando a Cláusula ON
+-- Self Join --> Join de uma tabela com ela mesma
+-- Nesse exemplo, e como se eu tivesse uma tab de empregado e uma de gerente, porem, e a mesma tab...
+
+SELECT empregado.employee_id "Id empregado", empregado.last_name "Sobrenome empregado",
+       gerente.employee_id "Id gerente", gerente.last_name "Sobrenome gerente"
+FROM employees empregado 
+JOIN employees gerente
+ON (empregado.manager_id = gerente.employee_id)
+ORDER BY empregado.employee_id;
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
 
 
 
