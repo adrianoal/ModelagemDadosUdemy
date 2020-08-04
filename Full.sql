@@ -2893,8 +2893,28 @@ ORDER BY d.department_id;
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
+59.Produto Cartesiano 
 
-  
+ * A cláusula CROSS JOIN produz um produto cartesiano entre duas tabelas.
+ 
+ 
+--
+-- Seção 11 
+-- Exibindo dados a partir de Múltiplas Tabelas
+--
+-- Aula 5 - Produto Cartesiano
+--
+
+-- Gerando um Produto Cartesiano utilizando Cross Join
+-- Combinacao M:M isso e o produto cartesiano:
+
+SELECT last_name, department_name
+FROM   employees
+  CROSS JOIN departments;
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------          
    
     
    
