@@ -3015,10 +3015,77 @@ WHERE  e.job_id = j.job_id;
    
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------          
-    
+Seção 19:Oracle 19c SQL Fundamentos - Utilizando Sub-Consultas 
+
+61.Sub-Consultas Single-Row
+
+ * A Sub-Consulta é executada antes da Consulta Principal
+ * O Resultado da Sub-Consulta é utilizado pela Consulta Principal
+
+1) Quais empregados possuem o salário maior do que a média de salários?
+
+RESOLUCAO:
+----------
+
+SELECT first_name, last_name, job_id, salary
+FROM   employees
+WHERE  salary >
+                (SELECT AVG(NVL(salary,0)) -- Media salarial, somente uma linha(Single-Row)
+                 FROM employees)
+ORDER BY SALARY;              
+
+
+--
+-- Seção 12 
+-- Utilizando Sub-Consultas
+--
+-- Aula 1 - Sub-Consultas Single-Row
+
+-- Sub-Consultas Single-Row
+-- SELECT * FROM EMPLOYEES;
+SELECT first_name, last_name, job_id, salary
+FROM   employees
+WHERE  salary >
+                (SELECT AVG(NVL(salary,0)) -- Media salarial, somente uma linha(Single-Row)
+                 FROM employees)
+ORDER BY SALARY;              
+
+
+SELECT ROUND(AVG(NVL(salary,0)),2)
+FROM employees;
+
+-- Utilizando Sub-consultas na Cláusula HAVING
+
+SELECT e1.department_id, MAX(e1.salary)
+FROM   employees e1
+GROUP BY e1.department_id
+HAVING MAX(salary) <  (SELECT ROUND(AVG(e2.salary),2)-- Media salario
+                       FROM   employees e2); 
+                       
+                       
+                                                  
+-- Erros utilizando Sub-consultas Single-Row
+
+SELECT employee_id, first_name, last_name
+FROM   employees
+WHERE  salary =
+                (SELECT    AVG(NVL(salary,0))
+                 FROM      employees
+                 GROUP BY  department_id);
+
+-- O que ocorre quando a Sub-Consulta retorna nenhuma linha?
+
+SELECT employee_id, first_name, last_name
+FROM   employees
+WHERE  last_name =  (SELECT last_name
+                     FROM   employees
+                     WHERE  last_name = 'Suzuki');
+                     
+
    
    
-   
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
    
    
    
