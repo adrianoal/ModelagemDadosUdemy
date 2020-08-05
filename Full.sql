@@ -3387,7 +3387,7 @@ ORDER BY employee_id;
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
-Seção 21:Oracle 19c SQL - Fundamentos - Comandos DML Manipulando Dados
+ -  Comandos DML Manipulando Dados
  
 68.Comandos DML Manipulando Dados
 
@@ -3632,6 +3632,81 @@ ORDER BY e.employee_id;
 COMMIT;
  
 ------------------------------------------------------------------------------------------------
+Seção 22:Oracle 19c SQL Fundamentos - Comandos DDL
+
+69.Oracle 19c SQL Fundamentos - Criando e gerenciando Tabelas
+
+ Principais Objetos do Banco de Dados Oracle:
+ --------------------------------------------
+ 
+ TABLE --> Unidade básica de armazenamento, composta de linhas
+ VIEW  --> Representação lógica de um sub-conjunto de dados de uma ou mais tabelas
+ SEQUENCE --> Objeto utilizado para gerar números sequenciais
+ INDEX --> Objeto utilizado para otimizar a performance de algumas consultas (queries)
+ SYNONYM --> Nome alternativo para um objeto 
+ 
+ -- SCHEMA:
+ ----------
+ 
+ Obs. Quando eu crio um objeto com meu usuário, não preciso informar o schema, porém, se eu for 
+ criar um objeto qualquer no schema de outro usuário, é preciso informar qual schema.
+ 
+ Geralmete o DBA não concede privilégio para o usuário criar objetos em outro schema, porém, 
+ se esse for o caso, você deve informar o schema.
+ 
+ 
+ TIPO DE DADOS:
+ --------------
+ 
+ Obs: VARCHAR2 --> Por default 4000 bytes
+	   Se o DBA alterar o parâmetro de inicialização MAX_STRING_SIZE = EXTENDED
+	   o VARCHAR2 passará a aceitar até 32767 bytes.
+
+
+ ---------------------------------
+ ---------------------------------		
+ ---------------------------------
+
+ DATA --> Por default é definido pelo DBA através do parâmetro NLS_DATE_FORMAT IGUAL DD/MM/YYYY
+		  se for no brasil.
+		  
+		  
+ TIMESTAMP --> Também para datas   
+		   No formato de DD/MM/YYYY HH24:MI:SS, porém, permite vc armazenar tbm até nove 
+		   dígitos decimais(ou seja após a vírgula) de segundo.
+		   Tem mais precisa que o DATE...		  
+ 		  
+ ---------------------------------
+ ---------------------------------		
+ ---------------------------------		  
+		  
+		  
+
+ NUMBER(p,s) --> Só aceita números até 38 dígitos
+		Obs: 1º argumento (Precisão) Numero total de dígitos do numero
+			 2º argumento (Escala)   Numero de casas decimais
+
+			 
+ ---------------------------------
+ ---------------------------------		
+ ---------------------------------
+ 			 
+ LONG --> É semelhante a (varchar2) porém, vc não declara o tamanho máximo, o tamanho máximo		
+		  por default é --> 2GB - 1
+	Obs: O LONG está obsoleto, porém, continua existindo.
+	
+ 
+ CLOB --> Mais moderno
+		  Significado: (Large object of type character/Objeto grando do tipo caracter)
+	      Semelhante ao VARCHAR2 e LONG 
+		O tamanho máximo do CLOB é definido pela forma (4 gigabytes -1) * o tamanho do bloco
+		de dados Oracle definido pelo parâmetro DB_BLOCK_SIZE.
+		Parâmetro DB_BLOCK_SIZE é definido pelo DBA.
+		Otamanho máximo será entre 8 TB e 128 TB
+ 
+ ---------------------------------
+ ---------------------------------		
+ ---------------------------------
  
  
  
@@ -3639,7 +3714,237 @@ COMMIT;
  
  
  
+ ---------------------------------
+ ---------------------------------		
+ --------------------------------- 		  
+ RAW --> Para armazenamento de dados do tipo binário,imagens, som, vídeos, fotografias, 
+         arquivo PDF, arquivo doc e etc.
+		Tamanho máximo 2000 bytes
+		Ou se o DBA alterar o parâmetro MAX_STRING_SIZE = EXTENDED, pode chegar até 32767 bytes
+		
+ LONG RAW --> É semelhante ao RAW, só que o tamanho máximo é de até 2GB -1
  
+ 
+ BLOB --> Mais moderno (Semelhante ao RAW e LONG RAW)
+ Obs: RAW e LONG RAW estão obsoletos!!!
+      --> Para armazenamento de dados do tipo binário,imagens, som, vídeos, fotografias, 
+         arquivo PDF, arquivo doc e etc.
+		O tamanho de dados é o mesmo definido pelo CLOB e a mesma forma:
+		
+		O tamanho máximo do CLOB é definido pela forma (4 gigabytes -1) * o tamanho do bloco
+		de dados Oracle definido pelo parâmetro DB_BLOCK_SIZE.
+		Parâmetro DB_BLOCK_SIZE é definido pelo DBA.
+		Otamanho máximo será entre 8 TB e 128 TB
+		
+		Um Arquivo BLOB fica armazenado no banco	
+
+ ---------------------------------
+ ---------------------------------		
+ ---------------------------------  
+	   
+ BFILE --> Também para armazenamento de dados binários, 
+		   Um Arquivo BFILE fica armazenado fora do banco, que vai estar localizado em um arquivo,
+		   e a coluna BFILE vai ter um ponteiro que aponta para o nome do arquivo e para o nome
+		   do diretório.
+		   
+		   Tamanho máximo do arquivo é de 4GB
+		   Tamanho máximo do nome do arquivo BFILE é 255 caracteres 
+		   Tamanho máximo do nome do diretório é 30 caracteres 
+		   
+
+ ROWID --> Um tipo de dado para armazenamento de um endereço lógico de uma linha de uma tabela 
+           
+ Exemplo:
+	
+  --SCHEMA HR:	
+  SELECT employee_id, 
+       first_name, 
+       ROWID AS PSEUDOCOLUNA, --Endereco logico da linha da tab empregado
+       LENGTH(rowid)AS TAMANHO -- o tamanho da string (rowid)
+  from   employees
+  WHERE rowid = 'AAAR6YAAEAAALBbAAE' -- Endereço logico, este e o metodo de acesso mais rapido no Oracle
+ 		   
+ 
+ ---------------------------------
+ ---------------------------------		
+ --------------------------------- 
+ 
+ BYNARY_FLOAT --> Tbm é numérco, só q o number fica armazenado no banco de dados no formato
+			  decimal, enquanto que o BYNARY_FLOAT fica armazenado no banco de dados no formato
+			  de (32 byts de precisão ponto flutuante).
+			  BYNARY_FLOAT --> usa 5 bytes de espaço de armazenamento
+			  
+ BYNARY_DOUBLE --> Tbm é numérco, fica armazenado no banco no formato ponto flutuante.
+				  Armazena um numérico de precisão dupla(64 byts ponto flutuante)
+
+ As vantagens de BYNARY_FLOAT e BYNARY_DOUBLE é que gastam menos espaço em disco.
+ 
+ BYNARY_FLOAT --> Requer 5 bytes de espaço de armazenamento
+ BYNARY_DOUBLE --> Requer 9 bytes de espaço de armazenamento
+ 
+ * Portanto a performance utilizando BYNARY_FLOAT e BYNARY_DOUBLE é melhor tanto de leitura e 
+   escrita tanto do disco quanto da memória.
+   
+
+ INTERVAL YEAR TO MONTH --> Para armazenar o intervalo entre duas datas, no intervalo
+							de ano e meses.
+							
+ 		   
+ INTERVAL DAY TO SECOND --> Para armazenar o intervalo entre duas datas, no intervalo de 
+							dias, horas, minutos e segundos.
+
+
+
+ CONSULTANDO AS TABELAS EXISTENTES PELO DICIONÁRIO DE DADOS:
+ ----------------------------------------------------------- 
+ 
+ Como eu posso descobrir quais são as tabelas que o meu usuário o schema do usuário que estou 
+ conectado possui?
+ 
+ 
+ Quem consulta os dicionário de dados? 
+ DBAs e os DEVELOPERs
+ 
+ --View do dicionario de dados da Oracle:
+   user_tables <-- View 
+	
+ -- Consultando as tabelas do schema do meu usuário:	
+ SELECT table_name FROM user_tables;
+ 
+ 
+ 
+ COMANDO DROP TABLE:
+ -------------------
+ 
+ * Remove a tabela e coloca a tabela na lixeira (Recycle bin)
+ 
+ * Se você desejar remover a tabela e seus dados definitivamente (sem colocar na lixeira)
+   deve utilizar a cláusula PURGE.
+
+ *  DROP TABLE (DML, Gera entradas de UNDO atrves do comando Rollback)
+ *  TRUNCATE TABLE (DDL, Nao gera entradas de UNDO) -- Muito mais rapido tbm...
+  
+ * Se a tabela a ser deletada(DROP) tem uma constraint Primary Key que é referenciada por
+   Foreign Key de outas tabelas, o Oracle não vai permitir remover.
+   Se quiser remover mesmo assim, tem que colocar a opção CASCADE
+   Se quiser que a tabela não vai para a lixeira CASCADE PURGE.
+   
+   
+
+--
+-- Seção 15 
+-- Comandos DDL 
+--
+-- Aula 1 - Criando e Gerenciando Tabelas
+--
+
+-- Consultando os objetos do schema do usuario HR
+
+SELECT *
+FROM   user_objects
+ORDER BY Object_type; -- Estou consultando os objetos do schema HR que estou conectado.
+
+-- Criando Tabelas
+
+
+--DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100) NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400) NOT NULL);
+ 
+ DESC projects
+ 
+ SELECT *
+ FROM projects;
+ 
+DROP TABLE TEAMS;
+
+CREATE TABLE TEAMS --Tabela associativa (projects/employee)Relação N:N
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL);
+
+-- Consultando a Estrutura da Tabela
+
+DESC projects
+
+DESC teams;
+
+-- Tipo ROWID
+
+DESC employees
+
+SELECT employee_id, 
+       first_name, 
+       ROWID AS PSEUDOCOLUNA, --Endereco logico da linha da tab empregado
+       LENGTH(rowid)AS TAMANHO -- o tamanho da string (rowid)
+from   employees
+WHERE rowid = 'AAAR6YAAEAAALBbAAE' -- Endereço logico, este e o metodo de acesso mais rapido no Oracle
+
+-- Consultando as Tabelas existentes pelo Dicionário de Dados
+
+DESC user_tables
+
+SELECT table_name
+FROM   user_tables;
+
+-- Consultando os Objetos do tipo TABLE do usuário
+-- Outra forma de consultar utilizando o dicionario de dados --> user_objects
+DESC user_objects
+
+SELECT object_name, object_type
+FROM   user_objects
+WHERE  object_type = 'TABLE';
+
+-- Criando uma Tabela utilizando uma Sub-consulta
+
+DROP TABLE employees_department60;
+
+CREATE TABLE employees_department60
+AS
+SELECT employee_id, last_name,salary*12 AS ANNSAL, hire_date
+FROM employees
+WHERE department_id = 60;
+
+DESC employees_department60
+
+SELECT *
+FROM   employees_department60;
+
+-- TRUNCATE TABLE (DDL, Nao gera entradas de UNDO) -- Muito mais rapido tbm...
+
+TRUNCATE TABLE employees_department60;
+
+SELECT *
+FROM   employees_department60;
+
+-- DROP TABLE (DML, Gera entradas de UNDO atrves do comando Rollback)
+--  DROP TABLE --> Coloca o objeto em uma lixeira chamada --> (Recycle bin)
+DROP TABLE employees_department60;
+
+SELECT *
+FROM   employees_department60;
+
+-- Consultando a Lixeira
+SELECT *
+FROM user_recyclebin; 
+
+-- Para recliclar a tabela, utilizar o comando --> Flashback
+--Exemplo:
+--Flashback table tb_teste to before drop;
+Flashback table EMPLOYEES_DEPARTMENT60 to before drop;   
+   
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
+
  
  
  
