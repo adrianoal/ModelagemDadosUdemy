@@ -3161,9 +3161,48 @@ WHERE  emp.employee_id NOT IN (SELECT mgr.manager_id
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
-  
+63.Utilizando operadores EXISTS e NOT EXISTS 
+
+--
+-- Seção 12 
+-- Utilizando Sub-Consultas
+--
+-- Aula 3 - Utilizando operador EXISTS e NOT EXISTS 
+--
+-- Geralmente o EXISTS e NOT EXISTS são mais performatico do que o IN e NOT IN.
+
+-- Utilizando operador EXISTS
+
+SELECT d.department_id, d.department_name
+FROM   departments d
+WHERE  EXISTS
+             (SELECT e.department_id
+               FROM   employees e
+               WHERE d.department_id = 
+                             e.department_id);
+							 
+-- Utilizando operador EXISTS
+
+SELECT d.department_id, d.department_name
+FROM   departments d
+WHERE  EXISTS (SELECT e.department_id
+               FROM employees e
+               WHERE d.department_id = e.department_id);
+
+-- Utilizando operador NOT EXISTS
+--Departamentos que nao tem empregados
+
+SELECT d.department_id, d.department_name
+FROM   departments d
+WHERE  NOT EXISTS (SELECT e.department_id
+                   FROM employees e
+                   WHERE d.department_id = e.department_id);
+    
+
  
- 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
+64.
   	
  
  
