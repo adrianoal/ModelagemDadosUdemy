@@ -3230,10 +3230,28 @@ WHERE     e2.department_id = 60;
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
-  	
+65.Utilizando Sub-consultas Miltiple-Column 
  
+--
+-- Seção 12 
+-- Utilizando Sub-Consultas
+--
+-- Aula 5 - Utilizando Sub-consultas Multiple-Column 
+-- 
+  
+-- Utilizando Sub-consultas Multiple-Column 
+-- Se a expressao de comparacao tiver duas colunas, a sub-consulta tbm tera q ter duas colunas e assim por diante
+
+SELECT e1.employee_id, e1.first_name, e1.job_id, e1.salary
+FROM   employees e1
+WHERE (e1.job_id, e1.salary) IN (SELECT   e2.job_id, MAX(e2.salary)
+                                 FROM     employees e2
+                                 GROUP by e2.job_id);
+								 
+
  
- 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
  
 
 
