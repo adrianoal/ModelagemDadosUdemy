@@ -4018,41 +4018,756 @@ ALTER TABLE employees READ WRITE;
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------              
+Seção 23:Oracle 19c SQL Fundamentos - Criando e Gerenciando Constraints 
 
+71.Criando Constraints na criação da Tabela 
+
+
+  Tipos de Constraints:
+  ---------------------
   
+  Constraints são regras de integridade, uma vez definido niguém vai poder viola essa linha.
+  Caso isso aconteça vai gerar um erro.
+  
+  Ao criar uma constraints é necessário dar um nome, caso contrário o Oracle vai dar um nome 
+  Default SYS_Cn (n --> significa um número sequêncial)
+  
+ * NOT NULL
+ * UNIQUE
+ * PRIMARY KEY
+ * FOREIGN KEY
+ * CHECK 
  
  
  
- 
- 
+ CONSTRAINTS NOT NULL
 
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
  
+ 
+ 
+ 
+ CONSTRAINTS PRIMARY KEY
+ 
+ Primary Key é o melhor identificador da tabela
+ Garante integridade
+
+-- Definindo Constraint PRIMARY KEY a nível de Coluna
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+	
+ 
+ Outro exemplo:
+ --------------
+ 
+-- Definindo Constraint PRIMARY KEY a nível de Tabela
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id)); 
+
+ Obs. Desde a versão 7 do Oracle, ele cria um índice para os campos que compoem as Primary Key
  			
  				
  
  
+ CONSTRAINTS UNIQUE
+ 
+ * Conceito lógico --> Identificador da tabela
+ * Garante a integridade --> Garante que a combinação dos valores das colunas que compõem a
+   Constraint Unique são Unicos.
+ * Constraint Unique permite Null.
+ * Ao criar uma constraint Unique o Oracle tbm cria um índice para as colunas que compões as Uniques
+ 
+-- Definindo Constraint UNIQUE a nível de Coluna
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ 
+ 
+ Outro exemplo:
+ --------------
+ 
+ 
+ -- Definindo Constraint UNIQUE a nível de Tabela 
+ CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code));  
  
  
  
  
+ CONSTRAINT FOREIGN KEY 
+ 
+ * Conceito Lógico:
+	Estabele a relação da Tabela com outra Tabela 
+	
+ * Garante a Integridade:
+	Garante a integridade referencial da tabela com a tabela referenciada.
+
+ * Obs: Ao criar um Constraint de Foreign key, não será criado index, caso jugue necessário,
+		deve ser criado manualmente.
+	
+ -- Definindo Constraint FOREIGN KEY a nível de Coluna	
+ CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL CONSTRAINT projects_department_id_fk REFERENCES departments,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ 
+ Outro exemplo:
+ --------------
+ 
+ -- Definindo Constraint FOREIGN KEY a nível de Tabela
+ CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code),
+ CONSTRAINT projects_department_id_fk FOREIGN KEY (department_id)
+ REFERENCES departments(department_id));
+ 
+ 
+ FOREIGN KEY REGRAS DE DELEÇÃO:
+ ------------------------------
+ 
+ Default -- NO ACTION
+ ON DELETE CASCADE --> Deleta as linhas dependentes na Tabela filha quando uma linha na Tabela 
+						pai(mãe) é deletada.
+						
+ ON DELETE SET NULL: --> Converte os valores das linhas dependetes da Foreign Key para NULO(NULL)						
+ 
+ Exemplos:
+ ---------
+ 
+-- FOREIGN KEY – Regras de deleção -- Default No Action
+CREATE TABLE TEAMS
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id) REFERENCES projects(project_id),      -- Default No Action
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees(employee_id)); -- Default No Action
+ 
+-- FOREIGN KEY – Regras de deleção -- ON DELETE CASCADE
+CREATE TABLE TEAMS
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id) REFERENCES projects(project_id) ON DELETE CASCADE,
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees(employee_id));
+ 
+-- FOREIGN KEY – Regras de deleção -- ON DELETE SET NULL
+CREATE TABLE TEAMS
+(project_id    NUMBER(6),
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id) REFERENCES projects(project_id) ON DELETE SET NULL,
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees(employee_id));
+ 
+
+  
+ CONSTRAINT CHECK 
+ 
+ 
+ * Define uma condição que cada linha deve sastifazer
+ 
+ 
+ * As seguintes expressões não são permitidas:
+   
+   Referências as pseudocolunas: CURRVAL, NEXTVAL, LEVEL, e ROWNUM
+   Exemplo:
+   Não posso referenciar --> SELECT EMPLOYEE_ID, FIRST_NAME, ROWNUM FROM EMPLOYEES;
+   
+   
+   
+   Chamadas as funções: SYSDATE, UID, USER e USERENV 
+   Exemplo: 
+   Não posso referenciar --> SELECT UID, USERENV('LANGUAGE'), USER, SYSDATE FROM DUAL
+   
+ * Consultas que referem a outros valores em outras linhas 
+
+ 
+-- Definindo Constraint CHECK a nível de Coluna   
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY, 
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL
+ CONSTRAINT projects_department_id_fk REFERENCES departments, 
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL 
+ CONSTRAINT projects_budget_ck CHECK (BUDGET > 0),
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ Outro exemplo:
+ --------------
+ 
+-- Definindo Constraint CHECK a nível de Tabela
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code),
+ CONSTRAINT projects_department_id_fk FOREIGN KEY (department_id)
+ REFERENCES departments(department_id),
+ CONSTRAINT projects_budget_ck CHECK (BUDGET > 0));
+
+ 
+ Como consultar as constraints pelo dicionario de dados:
+ -------------------------------------------------------
+ 
+ 
+ DESC user_constraints
+ 
+ DESC user_cons_columns
+ 
+ Para ver tudo em um único lugar com join: 
+ -----------------------------------------
+ 
+ SELECT co.constraint_name   AS NOME_CONSTRAINT,
+        co.constraint_type   AS TIPO_CONSTRAINT,
+        co.search_condition  AS EXPRESSAO_VALID,
+        co.r_constraint_name,
+        co.delete_rule		 AS REGRA_DELECAO,
+        cc.column_name		 AS NOME_COLUNA,
+        cc.position			 AS POSICAO,
+        co.status			 AS STATUS 
+ FROM   user_constraints co
+   JOIN user_cons_columns cc ON (co.constraint_name = cc.constraint_name) AND 
+                                (co.table_name = cc.table_name)
+ WHERE  co.table_name = 'PROJECTS'
+ ORDER BY co.constraint_name, cc.position;
  
  
  
  
+--
+-- Seção 16 
+-- Criando e Gerenciando Constraints 
+--
+-- Aula 1 - Criando e Gerenciando Constraints na criação da Tabela
+--
+
+-- Definindo Constraint NOT NULL
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
  
+ -- Definindo Constraint PRIMARY KEY a nível de Coluna
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
  
+ -- Definindo Constraint PRIMARY KEY a nível de Tabela
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id));
  
+ -- Definindo Constraint UNIQUE a nível de Coluna
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
  
+ -- Definindo Constraint UNIQUE a nível de Tabela
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code));
  
+  -- Definindo Constraint FOREIGN KEY a nível de Coluna
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL CONSTRAINT projects_department_id_fk REFERENCES departments,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
  
+ -- Definindo Constraint FOREIGN KEY a nível de Tabela
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code),
+ CONSTRAINT projects_department_id_fk FOREIGN KEY (department_id)
+ REFERENCES departments(department_id));
  
+ -- FOREIGN KEY – Regras de deleção -- Default No Action
  
+DROP TABLE TEAMS;
+CREATE TABLE TEAMS
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id) REFERENCES projects(project_id),      -- Default No Action
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees(employee_id)); -- Default No Action
  
+ -- FOREIGN KEY – Regras de deleção -- ON DELETE CASCADE
  
+DROP TABLE TEAMS;
+CREATE TABLE TEAMS
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id) REFERENCES projects(project_id) ON DELETE CASCADE,
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees(employee_id));
  
+ -- FOREIGN KEY – Regras de deleção -- ON DELETE SET NULL
  
+DROP TABLE TEAMS;
+CREATE TABLE TEAMS
+(project_id    NUMBER(6),
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id) REFERENCES projects(project_id) ON DELETE SET NULL,
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees(employee_id));
  
+-- Definindo Constraint CHECK a nível de Coluna
+-- Não posso referenciar --> SELECT UID, USERENV('LANGUAGE'), USER, SYSDATE FROM DUAL
+-- Não posso referenciar --> SELECT EMPLOYEE_ID, FIRST_NAME, ROWNUM FROM EMPLOYEES;
+
+DROP TABLE projects cascade constraints;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY, 
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL
+ CONSTRAINT projects_department_id_fk REFERENCES departments, 
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL 
+ CONSTRAINT projects_budget_ck CHECK (BUDGET > 0),
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
  
+ -- Definindo Constraint FOREIGN KEY a nível de Tabela
+
+DROP TABLE projects cascade constraints;
+--
+-- Seção 16 - Aula 1
+-- Criando e Gerenciando Constraints na criação da Tabela
+--
+
+-- Definindo Constraint NOT NULL
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ -- Definindo Constraint PRIMARY KEY a nível de Coluna
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ -- Definindo Constraint PRIMARY KEY a nível de Tabela
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id));
+ 
+ -- Definindo Constraint UNIQUE a nível de Coluna
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ -- Definindo Constraint UNIQUE a nível de Tabela
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code));
+ 
+  -- Definindo Constraint FOREIGN KEY a nível de Coluna
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL
+ CONSTRAINT projects_department_id_fk REFERENCES departments (department_id),
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ -- Definindo Constraint FOREIGN KEY a nível de Tabela
+
+DROP TABLE projects;
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code),
+ CONSTRAINT projects_department_id_fk FOREIGN KEY (department_id)
+ REFERENCES departments(department_id));
+ 
+ -- FOREIGN KEY – Regras de deleção -- Default No Action
+ 
+DROP TABLE TEAMS;
+CREATE TABLE TEAMS
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id)
+ REFERENCES projects(project_id),
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id)
+ REFERENCES employees(employee_id));
+ 
+ -- FOREIGN KEY – Regras de deleção -- ON DELETE CASCADE
+ 
+DROP TABLE TEAMS;
+CREATE TABLE TEAMS
+(project_id    NUMBER(6)  NOT NULL,
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id)
+ REFERENCES projects(project_id) ON DELETE CASCADE,
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id)
+ REFERENCES employees(employee_id));
+ 
+ -- FOREIGN KEY – Regras de deleção -- ON DELETE SET NULL
+ 
+DROP TABLE TEAMS;
+CREATE TABLE TEAMS
+(project_id    NUMBER(6),
+ employee_id   NUMBER(6)  NOT NULL,
+ CONSTRAINT teams_project_id_fk FOREIGN KEY (project_id)
+ REFERENCES projects(project_id) ON DELETE SET NULL,
+ CONSTRAINT teams_employee_id_fk FOREIGN KEY (employee_id)
+ REFERENCES employees(employee_id));
+
+ -- Oracle Functions (não podem ser referenciadas na constraint CHECK
+ 
+ SELECT uid, userenv('language'), user, sysdate
+ from   dual;
+ 
+ SELECT employee_id, first_name, rownum
+ FROM   employees;
+ 
+-- Definindo Constraint CHECK a nível de Coluna
+
+DROP TABLE projects cascade constraints;
+
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL
+ CONSTRAINT projects_project_id_pk PRIMARY KEY,
+ project_code  VARCHAR2(10) NOT NULL
+ CONSTRAINT projects_project_code_uk UNIQUE,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL
+ CONSTRAINT projects_department_id_fk REFERENCES departments,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL 
+ CONSTRAINT projects_budget_ck CHECK (budget > 0),
+ DESCRIPTION   VARCHAR2(400)NOT NULL);
+ 
+ -- Definindo Constraint CHECK a nível de Tabela
+
+DROP TABLE projects cascade constraints;
+
+CREATE TABLE projects
+(project_id    NUMBER(6)    NOT NULL, 
+ project_code  VARCHAR2(10) NOT NULL,
+ project_name  VARCHAR2(100)NOT NULL,
+ department_id NUMBER(4)    NOT NULL,
+ CREATION_DATE DATE DEFAULT sysdate NOT NULL,
+ START_DATE    DATE,
+ END_DATE      DATE,
+ STATUS        VARCHAR2(20) NOT NULL,
+ PRIORITY      VARCHAR2(10) NOT NULL,
+ BUDGET        NUMBER(11,2) NOT NULL,
+ DESCRIPTION   VARCHAR2(400)NOT NULL,
+ CONSTRAINT projects_project_id_pk PRIMARY KEY(project_id),
+ CONSTRAINT projects_project_code_uk UNIQUE (project_code),
+ CONSTRAINT projects_department_id_fk FOREIGN KEY (department_id)
+ REFERENCES departments(department_id),
+ CONSTRAINT projects_budget_ck CHECK (BUDGET > 0));
+ 
+ -- Violando Constraints - Erro
+ 
+ INSERT INTO projects (
+    project_id, project_code, project_name, department_id,
+    creation_date, start_date, end_date, status, priority,
+    budget, description) 
+    VALUES (
+    1, 'ERPIMP', 'ERP Implementation', 77, -- Na existe 77
+    sysdate, null, null, 'Aproved', 'HIGH',
+    1000000.00, 'Oracle ERP Implementation');
+    
+-- Violando Constraints - Corrigindo 
+
+INSERT INTO projects (
+    project_id, project_code, project_name, department_id,
+    creation_date, start_date, end_date, status, priority,
+    budget, description) 
+    VALUES (
+    1, 'ERPIMP', 'ERP Implementation', 60,
+    sysdate, null, null, 'Aproved', 'HIGH',
+    1000000.00, 'Oracle ERP Implementation');
+
+COMMIT;
+
+-- Consultando Constraints pelo Dicionário de Dados
+
+DESC user_constraints
+
+DESC user_cons_columns
+
+SELECT co.constraint_name   AS NOME_CONSTRAINT,
+        co.constraint_type   AS TIPO_CONSTRAINT,
+        co.search_condition  AS EXPRESSAO_VALIDACAO,
+        co.r_constraint_name,
+        co.delete_rule		 AS REGRA_DELECAO,
+        cc.column_name		 AS NOME_COLUNA,
+        cc.position			 AS POSICAO,
+        co.status			 AS STATUS 
+ FROM   user_constraints co
+   JOIN user_cons_columns cc ON (co.constraint_name = cc.constraint_name) AND 
+                                (co.table_name = cc.table_name)
+ WHERE  co.table_name = 'PROJECTS'
+ ORDER BY co.constraint_name, cc.position;
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
+ 72.Gerenciando Constraints 
  
  
  
