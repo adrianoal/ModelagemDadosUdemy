@@ -3263,7 +3263,10 @@ WHERE (e1.job_id, e1.salary) IN (SELECT   e2.job_id, MAX(e2.salary)
 		
 -- Utilizando Sub-Consultas na Cláusula FROM
 
-SELECT empregados.employee_id, empregados.first_name, empregados.last_name, empregados.job_id, 
+SELECT empregados.employee_id, 
+	   empregados.first_name, 
+	   empregados.last_name, 
+	   empregados.job_id, 
        empregados.salary, 
        ROUND(max_salary_job.max_salary,2) MAX_SALARY, 
        empregados.salary - ROUND(max_salary_job.max_salary,2) DIFERENÇA
@@ -3276,12 +3279,114 @@ FROM   employees empregados
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
+Seção 20:Oracle 19c SQL Fundamentos - Operadores SET
+ 
+67.Operadores SET 
+
+ Obs: Os operadores SET trabalham com conjuntos:
+ 
+ UNION 
+ UNION ALL --> Preserva as duplicidades
+ INTERSECT --> (Ou seja, o que esta entre as duas tabelas)
+ MINUS     --> Retorna as linha do primeiro select menos a linhas em comum com o segundo select
+ 
+ * Todos os operadores SET eliminam as linhas duplicadas, com exceção do UNION ALL
+ * Nao pode colocar o order by em cada select, apenas no resultado final
 
  
+ --
+-- Seção 13 - Aula 1
+-- Operadores SET
+--
+-- Aula 1 - Operadores SET
+--
+
+-- Utilizando o operador UNION 
+
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  department_id IN (60, 90, 100)
+UNION
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+ORDER BY employee_id;
+
+-- Utilizando o operador UNION ALL
+
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+UNION ALL
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  department_id = 60
+ORDER BY employee_id;
+
+-- Utilizando operador INTERSECT
+
+SELECT employee_id, job_id
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+INTERSECT
+SELECT employee_id, job_id
+FROM   employees
+WHERE  department_id IN (60, 90, 100)
+ORDER BY employee_id;
+
+-- Utilizando operador MINUS
+
+SELECT employee_id, job_id
+FROM   employees
+WHERE  department_id IN (60, 90, 100)
+MINUS
+SELECT employee_id, job_id
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+ORDER BY employee_id;
+
+-- Cuidados com os tipos de dados na lista de colunas ou expressões do SELECT
+
+SELECT employee_id, job_id, hire_date -- e do tipo date (motivo do erro)
+FROM   employees
+WHERE  department_id IN (60, 90, 100)
+UNION
+SELECT employee_id, job_id, salary -- e do tipo number (motivo do erro)
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+ORDER BY employee_id;
+
+-- Corrigindo o erro
+
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  department_id IN (60, 90, 100)
+UNION
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+ORDER BY employee_id;
+
+-- Utilizando mais de um operador SET
+/* Poder ter varios operadores SET, resolvera de cima para baixo, se eu quiser mudar a ordem de execucao, tenho que colocar parenteses,
+conforme exemplo abaixo:*/
+
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  department_id IN (60, 90, 100)
+UNION
+(SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  job_id = 'IT_PROG'
+INTERSECT
+SELECT employee_id, job_id, hire_date, salary
+FROM   employees
+WHERE  salary > 10000)
+ORDER BY employee_id;
  
  
- 
- 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
  
  
  
