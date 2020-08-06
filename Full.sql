@@ -5198,6 +5198,93 @@ DROP INDEX employees_last_name_first_name_idx;
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
+Seção 27:Oracle 19c SQL Fundamentos - Criando Sinônimos
+
+76.Criando Sinônimos
+
+ O que é um Sinônimo?
+ --------------------
+ 
+ * Simplifique o acesso a objetos criando um sinonimo(outro nome para um objeto).
+ 
+ * O DEV pode criar sinônimos privados.
+ Exemplo:
+ 
+ CREATE SYNONYM departamentos
+ FOR departments;
+ 
+ * O DBA pode criar sinônimos Públicos
+ Exemplo:
+ 
+ CREATE PUBLIC SYNONYM departamentos
+ FOR hr.departments;
+ 
+ 
+--
+-- Seção 20 
+-- Criando Sinônimos
+--
+-- Aula 1 - Criando Sinônimos
+--
+
+-- Criando Sinonimos Privados
+
+CREATE SYNONYM departamentos
+FOR departments;
+
+CREATE SYNONYM dept
+FOR departments;
+
+-- Utilizando Sinônimos
+
+SELECT *
+FROM departamentos;
+
+SELECT *
+FROM dept;
+
+-- Removendo Sinônimos
+
+DROP SYNONYM departamentos;
+
+DROP SYNONYM dept;
+
+-- Criando Sinônimos Públicos para Tabelas em outro Schema
+
+-- Conecte-se como SYS
+
+CREATE PUBLIC SYNONYM departamentos
+FOR hr.departments;
+
+CREATE PUBLIC SYNONYM dept
+FOR hr.departments;
+
+-- Conecte-se como SYS
+
+SELECT *
+FROM departamentos;
+
+SELECT *
+FROM dept;
+
+-- Conecte-se como HR
+
+SELECT *
+FROM departamentos;
+
+SELECT *
+FROM dept;
+
+-- Removendo Sinônimos Públicos
+
+-- Conecte-se como SYS
+
+DROP PUBLIC SYNONYM departamentos;
+
+DROP PUBLIC SYNONYM dept; 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
 
 
 
