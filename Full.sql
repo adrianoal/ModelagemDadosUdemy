@@ -5452,11 +5452,35 @@ SQL> quit
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
+Seção 29:Oportunidade de carreiras utilizando Tecnologias ORACLE
 
+78.Oportunidade de carreiras utilizando Tecnologias Oracle 
 
+ Aula de encerramento.
+ 
+ Oportunidades:
+ --------------
 
+ * Desenvolvedor de Aplicativos e Software
+ * Teste de Software
+ * ERP -- EBS, SAP, LINX, SALESFORCE e etc.
+ * Business Intelligence 
+ * Data Science
+ * Machine Learning
+ * Administração de Banco de DADOS
+ * Análise de Sistemas
+ * Análise de Negócio
+ * Gerência de Projetos 
+ 
+ Todas essa carreiras vai precisar se aprofundar de modo mais específico.
+ 
+ 
 
-
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------              
+							  -- CONCLUÍDO EM  06/08/2020 15:06 --
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
 
 
 
