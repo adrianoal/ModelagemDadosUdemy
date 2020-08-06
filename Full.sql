@@ -4965,6 +4965,121 @@ DROP VIEW vemployeesdept20;
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
+Seção 25:Oracle 19c SQl Fundamentos - Criando e Gerenciando Sequencias
+
+74.Criando e Gerenciando Sequencias 
+
+ O aue é uma sequencia?
+ ----------------------
+ ----------------------
+ 
+ * Uma Sequencia(Sequence) é um tipo de objeto utilizado para geração automática de números 
+   sequencias.
+   
+ * Um dos principais usos de uma Sequencia(Sequence) é gerar valores numéricos sequencias únicos
+   que poderão ser utilizados como valores para Chaves Primárias de Tabelas.
+   
+ * Você pode otimizar a performance de acesso aos valores gerados pela Sequencia utilizando 
+   CACHE de memória.
+   
+ SINTAXE:
+ --------
+
+ START WITH 210 -- Inicia a partir do 210 (210 --> Apenas exemplo)
+ INCREMENT BY 1 -- Incrementa de 1 em 1 (1 em 1 --> Apenas exemplo)
+ NOMAXVALUE 	-- Nao tem valor maximo
+ MAXVALUE 		-- Para valor maximo
+ NOCACHE 		-- Nao guarda uma quantidade em cache
+ CACHE 20  		-- Quarda uma quantidade em cache para ser mais rapido
+ CYCLE   		-- Quando atingir o valor maximo, ela volta para o inicio...
+ NOCYCLE 		-- Quando atingir o valor maximo, vai dar um erro.
+ 
+
+
+CREATE SEQUENCE employees_seq
+START WITH 210 
+INCREMENT BY 1 
+NOMAXVALUE 	   
+NOCACHE		   
+NOCYCLE; 	   
+
+ 
+
+--
+-- Seção 18 
+-- Criando e Gerenciando Sequencias
+--
+-- Aula 1 - Criando e Gerenciando Sequencias
+--
+
+-- Criando uma Sequencia
+
+SELECT MAX(employee_id) FROM   employees;
+
+DROP SEQUENCE employees_seq;
+
+CREATE SEQUENCE employees_seq
+START WITH 207
+INCREMENT BY 1
+NOMAXVALUE 
+NOCACHE
+NOCYCLE;
+
+-- Consultando Sequencias pelo Dicionario de Dados
+
+SELECT  * FROM    user_sequences;
+
+-- Recuperando próximo valor da Sequencia
+
+SELECT employees_seq.NEXTVAL FROM   dual;
+
+-- Recuperando o valor corrente da Sequencia
+SELECT employees_seq.CURRVAL FROM   dual;
+
+-- Removendo uma Sequencia 
+
+DROP SEQUENCE employees_seq;
+
+-- Recriando uma Sequencia
+
+CREATE SEQUENCE employees_seq
+START WITH 207
+INCREMENT BY 1
+NOMAXVALUE 
+NOCACHE
+NOCYCLE;
+
+-- Utilizando uma Sequencia na pratica
+
+INSERT INTO employees 
+           (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+       VALUES 
+           (employees_seq.nextval, 'Paul', 'Simon', 'PSIMO', '525.342.237', TO_DATE('12/02/2020', 'DD/MM/YYYY'), 'IT_PROG', 15000, NULL, 103, 60);
+
+SELECT *
+FROM employees
+ORDER BY employee_id DESC;
+
+COMMIT;
+
+-- Modificando uma Sequencia, alterando um parametro. Obs, qualquer parametro pode ser alterado!!!
+
+ALTER SEQUENCE employees_seq
+--MAXVALUE 999999
+CACHE 20; 
+ 
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
