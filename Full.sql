@@ -5071,7 +5071,156 @@ CACHE 20;
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
+Seção 26:Oracle 19c Fundamentos - Criando e Gerenciando Índices 
+
+
+ O que é um Índice?
+ ------------------
  
+ * É um objeto do schema(Ou seja, e separado da tabela. A tabela e um objeto o indice e outro objeto)
+ 
+ * Pode ser usado pelo Oracle para aumentar a performance da recupreração de linhas.
+
+ * Pode reduzir o (I/O) utilizando uma forma rápida de localizar o dado.
+ 
+ * O Índice é um objeto independente da tabela que ele indexa.
+ 
+ * É utilizado e mantido automaticamente pelo ORACLE.
+ 
+ Obs: Quando se faz um select utilizando a clausula where o otmizador faz um Full Table Scan 
+	  na tabela inteira, linha a linha, e isso tem um custo alto.
+	  Ao usar um índice, você está influenciando o otmizador a melhorar o plano de execução, 
+	  e com isso você tem ganho de performance.
+	  
+ AUTOMATICAMENTE:
+ ---------------- 
+	  
+ * Um Índice Unico é criado automaticamente quando você define uma Constraints de Primary Key	  
+   ou  Unique na definição da tabela.
+
+ 
+
+ MANUALMENTE:
+ -------------
+   
+ * O Desenvolvedor ou DBA pode criar quantos índices julgar necessário dentro dos 
+   critérios de Tuning...
+ 
+ * O Desenvolvedor ou DBA(Usuários) podem criar índices simple(uma coluna) ou composto 
+   (mais de uma coluna) para melhorar a performance do acesso as linhas.
+   
+ * Deve ser criado um índices para as colunas de Foreign Key.
+
+ 
+ * Ao inserir, deletar, e atualizar linhas, os índices vão vão sofrendo deleções lógicas, com 
+   isso os índices vão ficando desorganizado, e isso pode onerar a performance.
+   Quando isso acontece, deve recuperar o índice reorganizar.
+
+ Exemplo:
+ 
+ ALTER INDEX nomedoindice REBUILD;
+ ALTER INDEX employees_last_name_first_name_idx REBUILD;
+ 
+ 
+--
+-- Seção 19 
+-- Criando e Gerenciando Índices
+--
+-- Aula 1 - Criando e Gerenciando Índices
+--
+
+-- Analize o custo do comando no plano de execução
+
+DROP INDEX emp_name_ix;
+DROP INDEX employees_last_name_idx;
+DROP INDEX employees_name_idx;
+
+SELECT *
+FROM  employees
+WHERE last_name = 'Himuro';
+
+-- Criando um Indice Simples
+
+CREATE INDEX employees_last_name_idx
+ON employees(last_name);
+
+-- Analize o custo do comando no plano de execução
+
+SELECT *
+FROM  employees
+WHERE last_name = 'Himuro';
+
+-- Criando um Indice Composto
+
+CREATE INDEX employees_last_name_first_name_idx
+ON employees(last_name, first_name);
+
+-- Analize o custo do comando no plano de execução
+
+SELECT *
+FROM  employees
+WHERE last_name = 'Himuro' AND 
+      first_name = 'Guy';
+
+-- Reconstruindo e reorganizando um Índice
+
+
+
+ALTER INDEX employees_last_name_first_name_idx REBUILD;
+
+-- Removendo um Índice
+
+DROP INDEX employees_last_name_idx;
+
+
+-- Consultando índices do usuário que estou conextado através das Views do Dicionário de dados.
+-- Consultando Indices
+
+SELECT ix.index_name,
+       ic.column_position,
+       ic.column_name,
+       ix.index_type,
+       ix.uniqueness,
+       ix.status
+FROM    user_indexes ix
+  JOIN user_ind_columns ic ON (ix.index_name = ic.index_name) AND 
+                              (ix.table_name = ic.table_name)
+WHERE ix.table_name = 'EMPLOYEES' -- Informar o objeto que deseja consultar o indíce
+ORDER BY ix.index_name, ic.column_position; 
+
+-- Removendo um Índice
+
+DROP INDEX employees_last_name_idx;
+
+DROP INDEX employees_last_name_first_name_idx; 
+    
+	  
+ 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  
