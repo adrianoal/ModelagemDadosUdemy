@@ -4828,22 +4828,143 @@ ENABLE CONSTRAINT projects_project_id_pk;
  
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------             
+Seção 24:Oracle 19c Fundamentos - Criando e Gerenciando Visões
+
+73.Criando e Gerenciando Visões 
+
+ O que é uma visão?
+ ------------------
+ 
+ * Uma visão é uma representação lógica baseada em um SELECT sobre uma ou mais tabelas ou sobre
+   outras visões.
+ 
+ * Uma Visão é um Sub-conjunto lógico dos dados de uma ou mais tabelas.
+ 
+ * A Visão é armazenada no Dicionário de Dados juntamente com o SELECT que a representa.
+ 
+ 
+ Vantagens de utilizar visões:
+ -----------------------------
+ 
+ * Restringir acesso aos dados
+ * Tornar simples consultas complexas
+ * Proporcionar independência dos dados
+ * Representar visões diferentes do mesmo dado
+ 
+ 
+ Regras para executar operações DML(DELETE/UPDATE/INSERT) através de um visão.
+ -----------------------------------------------------------------------------
+ 
+ UPDATE --> Não pode modificar linhas através de uma Visão complexa que contem:
+			- Função de Grupo 
+			- Cláusula de Grupo
+			- Palavra Chave DISTINCT
+			- A Pseudocodigo ROWNUM 
+			- Colunas definidas por expressões 
+			
+ 
+ DELETE --> Não pode deletar linhas através de uma Visão complexa que contem:
+			- Função de Grupo 
+			- Cláusula de Grupo
+			- Palavra Chave DISTINCT
+			- A Pseudocodigo ROWNUM 
+			- Colunas definidas por expressões  
  
  
  
+ INSERT --> Não pode inserir linhas através de uma Visão complexa que contem:
+			- Função de Grupo 
+			- Cláusula de Grupo
+			- Palavra Chave DISTINCT
+			- A Pseudocodigo ROWNUM 
+			- Colunas definidas por expressões   
+			- Colunas NOT NULL nas tabelas base que estejam no SELECT da visão
+			
+ 			
+ View que não permite operações DML:
+ -----------------------------------
+ Basta colocar no final do código --> WITH READ ONLY(Somente leitura)
  
+ Exemplo:
  
- 
- 
- 
-  
- 
+CREATE OR REPLACE VIEW vemployeesdept20
+AS SELECT employee_id, first_name, last_name, department_id, salary
+FROM employees
+WHERE department_id = 20
+WITH READ ONLY;
 
  
  
+ --
+-- Seção 17 
+-- Criando e Gerenciando Visões
+--
+-- Aula 1 - Criando e Gerenciando Visões
+--
+
+-- Criando uma Visão
+-- Obs. Ao criar uma View [NOFORCE] --> Significa que sou vai criar se estiver correta. Esse é o Default!
+--                        [FORCE] --> Significa que mesmo errada a View será criada.
+
+
+
+
+
+CREATE OR REPLACE VIEW vemployeesdept60
+AS SELECT employee_id, first_name, last_name, department_id, salary, commission_pct
+FROM employees
+WHERE department_id = 60;
+
+DESC vemployeesdept60
+
+-- Recuperando dados utilizando uma Visão
+
+SELECT *
+FROM   vemployeesdept60;
+
+-- Criando uma Visão Complexa 
+
+CREATE OR REPLACE VIEW vdepartments_total(department_id, 
+                                          department_name, 
+                                          minsal, 
+                                          maxsal, 
+                                          avgsal)AS 
+                                          SELECT e.department_id, 
+                                                 d.department_name, 
+                                                 MIN(e.salary),
+                                                 MAX(e.salary),
+                                                 TRUNC(AVG(e.salary),2)
+                                          FROM employees e 
+                                          JOIN departments d
+                                          ON (e.department_id = d.department_id)
+GROUP BY e.department_id, department_name;
+
+SELECT * 
+FROM   vdepartments_total;
+
+-- Utilizando a Cláusula CHECK OPTION
+
+CREATE OR REPLACE VIEW vemployeesdept100
+AS SELECT employee_id, first_name, last_name, department_id, salary
+FROM employees
+WHERE department_id = 100
+WITH CHECK OPTION CONSTRAINT vemployeesdept100_ck; -- Checa a clausula Where antes de permitir a execucao.
+
+-- Utilizando a Cláusula READ ONLY
+
+CREATE OR REPLACE VIEW vemployeesdept20
+AS SELECT employee_id, first_name, last_name, department_id, salary
+FROM employees
+WHERE department_id = 20
+WITH READ ONLY;
+
+-- Removendo uma Visão
+
+DROP VIEW vemployeesdept20;
+
  
- 
- 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------             
  
  
  
